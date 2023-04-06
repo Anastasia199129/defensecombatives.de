@@ -16,6 +16,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
        <h1>Main</h1>
+       <button>About</button>
       </main>
     </>
   )
