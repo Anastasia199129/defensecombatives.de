@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Startseite",
+    "link": "startseite"
+  },
+  {
+    "name": "Ueber uns",
+    "link": "ueber-uns"
+  },
+  {
+    "name": "Unser Kursangebot",
+    "link": "unser-Kursangebot"
+  },
+  {
+    "name": "Behoerden und oeffentliche Traeger",
+    "link": "behoerden-und-oeffentliche-traeger"
+  },
+  {
+    "name": "Impressum",
+    "link": "impressum"
+  }
+]
