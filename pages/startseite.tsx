@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function 
+export default function Startseite 
 () {
   return <h2>
     Startseite

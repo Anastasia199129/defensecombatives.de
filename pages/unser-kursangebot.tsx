@@ -1,4 +1,4 @@
-export default function () {
+export default function UnserKursangebot() {
   return (
     <div>Unser Kursangebot</div>
   )

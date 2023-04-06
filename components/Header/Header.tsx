@@ -6,7 +6,7 @@ interface Data {
   link: string
 }
 
-export default function () {
+export default function Header () {
   return (
     <div>
       {data &&
