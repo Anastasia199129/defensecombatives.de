@@ -8,7 +8,7 @@ import {
   Heading,
   Input,
   Textarea,
-  Button
+  Button,
 } from '@chakra-ui/react'
 // import { Button } from '@material-ui/core'
 import { useState } from 'react'
@@ -24,17 +24,23 @@ const initialState = { values: initValues, isLoading: false }
 
 export default function ChacraForm() {
   const [state, setState] = useState(initialState)
-  const [touched, setTouched] = useState({name: false, number: false, email: false})
+  const [touched, setTouched] = useState({
+    name: false,
+    number: false,
+    email: false,
+  })
   const { values, isLoading } = state
 
-  const onBlur = ({target}) => {
+  const onBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLButtonElement
     setTouched((prev) => ({
-    ...prev,
-    [target.name]: true
+      ...prev,
+      [target.name]: true,
     }))
   }
 
-  const handleChange = ({ target }) =>
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const target = e.target //as HTMLButtonElement | HTMLTextAreaElement
     setState((prev) => ({
       ...prev,
       values: {
@@ -42,19 +48,33 @@ export default function ChacraForm() {
         [target.name]: target.value,
       },
     }))
+  }
 
-    const onSubmit = async(e) => {
-      setState((prev) => ({
-        ...prev,
-        isLoading: true
-      }))
+  const handleChangeTextarea = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const target = e.target as HTMLTextAreaElement
+    setState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [target.name]: target.value,
+      },
+    }))
+  }
+
+  const onSubmit = async () => {
+    setState((prev) => ({
+      ...prev,
+      isLoading: true,
+    }))
+    if (values.name && values.email && values.number) {
       await sendContactForm(values)
-    }
+    } else alert('qweqweqwe')
+  }
 
   return (
     <Container maxW='450' mt={12}>
       <Heading>ChacraForm</Heading>
-      <FormControl isRequired isInvalid={!values.name && touched.name}  mb={5}>
+      <FormControl isRequired isInvalid={!values.name && touched.name} mb={5}>
         <FormLabel>Name</FormLabel>
         <Input
           type='text'
@@ -76,9 +96,9 @@ export default function ChacraForm() {
         />
         <FormErrorMessage>Required</FormErrorMessage>
       </FormControl>
-      <FormControl 
-        isRequired 
-        isInvalid={!values.number && touched.number} 
+      <FormControl
+        isRequired
+        isInvalid={!values.number && touched.number}
         mb={5}
       >
         <FormLabel>Number</FormLabel>
@@ -98,11 +118,11 @@ export default function ChacraForm() {
           name='message'
           rows={4}
           value={values.message}
-          onChange={handleChange}
+          onChange={handleChangeTextarea}
         />
       </FormControl>
 
-      <Button 
+      <Button
         variant='outline'
         colorScheme='blue'
         isLoading={isLoading}
@@ -111,7 +131,6 @@ export default function ChacraForm() {
       >
         Submit
       </Button>
-
     </Container>
   )
 }

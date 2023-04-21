@@ -1,7 +1,13 @@
-export const createSendGrMsg = ({name, number, email, message}) => {
+interface Props {
+  name: string
+  number: string
+  email: string
+  message: string
+}
 
-  console.log('here', name, message, email, number);
-  
+export const createSendGrMsg = ({ name, number, email, message }: Props) => {
+  console.log('here', name, message, email, number)
+
   return {
     to: email,
     from: 'defensecombatives.de@gmail.com',
