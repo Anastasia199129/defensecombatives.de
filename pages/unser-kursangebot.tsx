@@ -1,5 +1,3 @@
 export default function UnserKursangebot() {
-  return (
-    <div>Unser Kursangebot</div>
-  )
+  return <div>Unser Kursangebot</div>
 }

@@ -1,5 +1,3 @@
-export default function UeberUns () {
-  return (
-    <div>Ueber Uns</div>
-  )
+export default function UeberUns() {
+  return <div>Ueber Uns</div>
 }
