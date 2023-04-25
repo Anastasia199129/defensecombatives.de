@@ -81,7 +81,7 @@ export default function ChacraForm() {
         }))
       }      
 
-      const res = await axios.post('https://defensecombatives-de.vercel.app/api/users/addUser', {
+      const res = await axios.post('/api/users/addUser', {
        ...values
       })
        console.log({res});
@@ -90,7 +90,7 @@ export default function ChacraForm() {
   }
 
   const getAllUsers = async() => {
-    const {data} = await axios.get('https://defensecombatives-de.vercel.app/api/users/getAllUsers')
+    const {data} = await axios.get('/api/users/getAllUsers')
     console.log({data});
   }
 
