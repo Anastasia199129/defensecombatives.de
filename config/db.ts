@@ -5,7 +5,7 @@ const pool = createPool({
   user: 'root',
   password: '000420ANa.',
   port: 3306,
-  database: 'defensecombatives'
+  database: 'defensecombativesde'
 })
 
 export default pool
