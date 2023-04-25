@@ -1,7 +1,7 @@
 import {createPool} from 'mysql2/promise'
 
 const pool = createPool({
-  host: 'localhost',
+  host: 'defensecombatives-de.vercel.app',
   user: 'root',
   password: '000420ANa.',
   port: 3306,
