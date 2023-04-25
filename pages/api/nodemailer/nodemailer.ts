@@ -32,11 +32,12 @@ const handler = async (
   try {
     if (req.method === 'POST') {
       const data = req.body
-      if (!data?.name || !data.email || !data.number) {
+      if (!data?.name || !data.email || !data.nachname ) {
         return res.status(400).json({ message: 'Bad request' })
       }
       const msg = createSendGrMsg(data)
       await sgMail.send(msg)
+      return res.status(200).json(msg)
     }
   } catch (error) {
     return res.status(500).json({ error: error })

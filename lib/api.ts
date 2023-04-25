@@ -1,8 +1,9 @@
 export const sendContactForm = async (data: {
   name: string
+  nachname: string
   email: string
   number: string
-  message: string
+  nachricht: string
 }) =>
   fetch('/api/nodemailer/nodemailer', {
     method: 'POST',

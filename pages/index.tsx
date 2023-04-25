@@ -7,7 +7,6 @@ import Header from '@/components/Header/Header'
 import Form from '@/components/Form/Form'
 import ChacraForm from '@/components/Form/ChacraForm'
 
-// const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
