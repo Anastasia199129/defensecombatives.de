@@ -5,7 +5,7 @@ const password = process.env.PASSWORD
 const pool = createPool({
   host: 'defensecombatives-de.vercel.app',
   user: 'root',
-  password: '000420ANa.',
+  password,
   port: 3306,
   database: 'defensecombativesde'
 })
