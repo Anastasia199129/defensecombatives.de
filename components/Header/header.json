@@ -1,22 +1,37 @@
 [
   {
-    "name": "Startseite",
-    "link": "startseite"
+    "id": "1",
+    "name": "Start",
+    "link": "/"
   },
   {
-    "name": "Ueber uns",
-    "link": "ueber-uns"
+    "id": "2",
+    "name": "Kinder",
+    "link": "/kinder"
   },
   {
-    "name": "Unser Kursangebot",
-    "link": "unser-kursangebot"
+    "id": "3",
+    "name": "Frauen",
+    "link": "/frauen"
   },
   {
-    "name": "Behoerden und oeffentliche Traeger",
-    "link": "behoerden-und-oeffentliche-traeger"
+    "id": "4",
+    "name": "Erwachsene",
+    "link": "/erwachsene"
   },
   {
-    "name": "Impressum",
-    "link": "impressum"
+    "id": "5",
+    "name": "Behörden",
+    "link": "/behorden"
+  },
+  {
+    "id": "6",
+    "name": "Trainingsplan",
+    "link": "/trainingsplan"
+  },
+  {
+    "id": "7",
+    "name": "Über uns",
+    "link": "/uber_uns"
   }
 ]

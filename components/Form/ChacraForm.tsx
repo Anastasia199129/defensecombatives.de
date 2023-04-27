@@ -1,19 +1,19 @@
 import { sendContactForm } from '@/lib/api'
+import MyContainer from '../Container/Container'
 import {
   FormControl,
   FormLabel,
   FormErrorMessage,
-  FormHelperText,
   Container,
-  Heading,
   Input,
   Textarea,
   Button,
 } from '@chakra-ui/react'
+import { toast } from 'react-toastify'
 import axios from 'axios'
-import { log } from 'console'
-// import { Button } from '@material-ui/core'
 import { useState } from 'react'
+
+import s from './Form.module.sass'
 
 const initValues = {
   name: '',
@@ -33,6 +33,23 @@ export default function ChacraForm() {
     email: false,
   })
   const { values, isLoading } = state
+
+  // const notify = (status: string) => {
+  //   console.log(status)
+
+  //   switch (status) {
+  //     case 'success':
+  //       console.log('1')
+  //       toast.success('Daten gesendet!')
+  //       break
+  //     case 'error':
+  //       console.log('2')
+  //       toast.error('Pflichtfelder ausfüllen!')
+  //     default:
+  //       console.log('3')
+  //       break
+  //   }
+  // }
 
   const onBlur = (e: React.FocusEvent<HTMLInputElement>) => {
     const target = e.target as HTMLButtonElement
@@ -71,102 +88,112 @@ export default function ChacraForm() {
       isLoading: true,
     }))
     if (values.name && values.email && values.nachname) {
-
       const result = await sendContactForm(values)
-
-      if(result.ok){
-        setState((prev) => ({
-          ...prev,
-          isLoading: false,
-        }))
-      }      
-
-      const res = await axios.post('/api/users/addUser', {
-       ...values
-      })
-       console.log({res});
-       
-    } else alert('qweqweqwe')
+      if (result.ok) {
+        const res = await axios.post('/api/users/addUser', {
+          ...values,
+        })
+        toast.success('Daten gesendet!')
+        setState(initialState)
+        setTouched({
+          name: false,
+          nachname: false,
+          email: false,
+        })
+        console.log({ res })
+      }
+    } else {
+      toast.error('Pflichtfelder ausfüllen!')
+      setState(initialState)
+    }
   }
 
-  const getAllUsers = async() => {
-    const {data} = await axios.get('/api/users/getAllUsers')
-    console.log({data});
-  }
+  // const getAllUsers = async () => {
+  //   try {
+  //     const { data } = await axios.get('/api/users/getAllUsers')
+  //     console.log({ data })
+  //   } catch (error) {
+  //     console.log({ error })
+  //   }
+  // }
+  // return  <button onClick={getAllUsers}>get All</button>
 
-  return (
-    <Container maxW='450' mt={12}>
-      <button onClick={getAllUsers}>get All</button>
-      <Heading>ChacraForm</Heading>
-      <FormControl isRequired isInvalid={!values.name && touched.name} mb={5}>
-        <FormLabel>Name</FormLabel>
-        <Input
-          type='text'
-          name='name'
-          value={values.name}
-          onChange={handleChange}
-          onBlur={onBlur}
-        />
-        <FormErrorMessage>Required</FormErrorMessage>
-      </FormControl>
-      <FormControl isRequired isInvalid={!values.nachname && touched.nachname} mb={5}>
-        <FormLabel>Nachname</FormLabel>
-        <Input
-          type='text'
-          name='nachname'
-          value={values.nachname}
-          onChange={handleChange}
-          onBlur={onBlur}
-        />
-        <FormErrorMessage>Required</FormErrorMessage>
-      </FormControl>
-      <FormControl isRequired isInvalid={!values.email && touched.email} mb={5}>
-        <FormLabel>E-Mail</FormLabel>
-        <Input
-          type='email'
-          name='email'
-          value={values.email}
-          onChange={handleChange}
-          onBlur={onBlur}
-        />
-        <FormErrorMessage>Required</FormErrorMessage>
-      </FormControl>
+  return <MyContainer>
+      <div className={s.formContainer}>
+        <Container className={s.form} maxW='100%'>
+          <FormControl
+            isRequired
+            isInvalid={!values.name && touched.name}
+            mb={5}
+          >
+            <FormLabel>Name</FormLabel>
+            <Input
+              type='text'
+              name='name'
+              value={values.name}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            <FormErrorMessage>Obligatorisch</FormErrorMessage>
+          </FormControl>
+          <FormControl
+            isRequired
+            isInvalid={!values.nachname && touched.nachname}
+            mb={5}
+          >
+            <FormLabel>Nachname</FormLabel>
+            <Input
+              type='text'
+              name='nachname'
+              value={values.nachname}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            <FormErrorMessage>Obligatorisch</FormErrorMessage>
+          </FormControl>
+          <FormControl
+            isRequired
+            isInvalid={!values.email && touched.email}
+            mb={5}
+          >
+            <FormLabel>E-Mail</FormLabel>
+            <Input
+              type='email'
+              name='email'
+              value={values.email}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            <FormErrorMessage>Obligatorisch</FormErrorMessage>
+          </FormControl>
 
-      <FormControl
-        // isRequired
-        // isInvalid={!values.number && touched.number}
-        mb={5}
-      >
-        <FormLabel>Telefon</FormLabel>
-        <Input
-          type='number'
-          name='number'
-          // errorBorderColor='red.300'
-          value={values.number}
-          onChange={handleChange}
-          // onBlur={onBlur}
-        />
-        {/* <FormErrorMessage>Required</FormErrorMessage> */}
-      </FormControl>
-      <FormControl mb={5}>
-        <FormLabel>Nachricht</FormLabel>
-        <Textarea
-          name='nachricht'
-          rows={4}
-          value={values.nachricht}
-          onChange={handleChangeTextarea}
-        />
-      </FormControl>
-
-      <Button
-        variant='outline'
-        colorScheme='blue'
-        isLoading={isLoading}
-        disabled={!values.name || !values.email || !values.nachname}
-        onClick={onSubmit}
-      >
-        Submit
-      </Button>
-    </Container>
-  )
+          <FormControl mb={5}>
+            <FormLabel>Telefon</FormLabel>
+            <Input
+              type='number'
+              name='number'
+              value={values.number}
+              onChange={handleChange}
+            />
+          </FormControl>
+          <FormControl mb={5}>
+            <FormLabel>Nachricht</FormLabel>
+            <Textarea
+              name='nachricht'
+              rows={4}
+              value={values.nachricht}
+              onChange={handleChangeTextarea}
+            />
+          </FormControl>
+        </Container>
+        <Button
+          className={s.button}
+          isLoading={isLoading}
+          disabled={!values.name || !values.email || !values.nachname}
+          onClick={onSubmit}
+        >
+          Schicken
+        </Button>
+      </div>
+      </MyContainer>
 }

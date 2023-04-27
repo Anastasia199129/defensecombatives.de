@@ -3,7 +3,19 @@ $a: 'Archivo', sans-serif
 $r: 'Roboto', sans-serif
 
 //colors
+$white: #ffffff 
 
 
 // effects
 $tr: 0.2s
+
+///micsines
+@mixin r($minSize, $maxSize: false)
+
+  @if $minSize and $maxSize
+    @media only screen and (min-width: $minSize + 'px') and (max-width: $maxSize + 'px')
+      @content
+
+  @else
+    @media only screen and (min-width: $minSize + 'px')
+      @content

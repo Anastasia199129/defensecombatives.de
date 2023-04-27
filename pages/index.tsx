@@ -6,6 +6,8 @@ import Header from '@/components/Header/Header'
 // import New, { DemoCarousel } from '@/components/New'
 import Form from '@/components/Form/Form'
 import ChacraForm from '@/components/Form/ChacraForm'
+import Container from '../components/Container/Container'
+import Hero from '@/components/Hero/Hero'
 
 
 export default function Home() {
@@ -19,6 +21,7 @@ export default function Home() {
       </Head>
       <Header />
       <main>
+        <Hero/>
         {/* <New /> */}
         <ChacraForm />
         {/* <Form /> */}

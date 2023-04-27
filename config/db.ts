@@ -3,11 +3,11 @@ import {createPool} from 'mysql2/promise'
 const password = process.env.PASSWORD
 
 const pool = createPool({
-  host: 'defensecombatives-de.vercel.app',
+  host: 'localhost',
   user: 'root',
   password,
   port: 3306,
-  database: 'defensecombativesde'
+  database: 'defensecombatives'
 })
 
 export default pool

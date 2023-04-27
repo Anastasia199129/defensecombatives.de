@@ -3,6 +3,8 @@ import type { AppProps } from 'next/app'
 
 // import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { ChakraProvider } from '@chakra-ui/react'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // const theme = createTheme({
 //   palette: {
@@ -25,5 +27,6 @@ import { ChakraProvider } from '@chakra-ui/react'
 export default function App({ Component, pageProps }: AppProps) {
   return <ChakraProvider>
      <Component {...pageProps} />
+     <ToastContainer autoClose={2000}/>
   </ChakraProvider>
 }
