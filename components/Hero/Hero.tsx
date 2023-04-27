@@ -1,4 +1,4 @@
-import DemoCarousel  from '../New'
+// import DemoCarousel  from '../New'
 import s from './Hero.module.sass'
 
 export default function Hero() {
