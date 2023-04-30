@@ -14,7 +14,6 @@ import axios from 'axios'
 import { useState } from 'react'
 
 import s from './Form.module.sass'
-import { log } from 'console'
 
 const initValues = {
   name: '',
