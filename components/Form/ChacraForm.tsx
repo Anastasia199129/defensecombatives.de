@@ -14,6 +14,7 @@ import axios from 'axios'
 import { useState } from 'react'
 
 import s from './Form.module.sass'
+import { log } from 'console'
 
 const initValues = {
   name: '',
@@ -89,7 +90,8 @@ export default function ChacraForm() {
     }))
     if (values.name && values.email && values.nachname) {
       const result = await sendContactForm(values)
-      if (result.ok) {
+      try {
+        // if (result.ok) {
         const res = await axios.post('/api/users/addUser', {
           ...values,
         })
@@ -101,6 +103,9 @@ export default function ChacraForm() {
           email: false,
         })
         console.log({ res })
+        // }
+      } catch (error) {
+        console.log(error)
       }
     } else {
       toast.error('Pflichtfelder ausfüllen!')
@@ -118,8 +123,9 @@ export default function ChacraForm() {
   // }
   // return  <button onClick={getAllUsers}>get All</button>
 
-  return <MyContainer>
-      <div className={s.formContainer}>
+  return (
+    <MyContainer>
+      <form onSubmit={onSubmit} className={s.formContainer}>
         <Container className={s.form} maxW='100%'>
           <FormControl
             isRequired
@@ -186,14 +192,16 @@ export default function ChacraForm() {
             />
           </FormControl>
         </Container>
-        <Button
+        <button>kjojl</button>
+        {/* <Button
           className={s.button}
           isLoading={isLoading}
           disabled={!values.name || !values.email || !values.nachname}
           onClick={onSubmit}
         >
           Schicken
-        </Button>
-      </div>
-      </MyContainer>
+        </Button> */}
+      </form>
+    </MyContainer>
+  )
 }
