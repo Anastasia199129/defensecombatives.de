@@ -4,6 +4,7 @@ import s from './Header.module.sass'
 import { useRouter } from 'next/router'
 import { log } from 'console'
 import Container from '../Container/Container'
+import {useSelector} from 'react-redux'
 
 interface Data {
   id: string
@@ -12,6 +13,9 @@ interface Data {
 }
 
 export default function Header() {
+  const state = useSelector(state => state)
+// console.log(state.user);
+
   const router = useRouter()
 
   const getActiveLink = (link: string) => {
@@ -33,6 +37,7 @@ export default function Header() {
             </p>
           ))}
       </div>
+
     </Container>
   )
 }

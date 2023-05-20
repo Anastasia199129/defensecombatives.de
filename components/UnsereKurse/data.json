@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "text": "<p>KRAV MAGA<br/> FÜR ERWACHSENE</p>",
+    "img": {
+      "alt": "",
+      "src": "img/Icons_main-01.png",
+      "title": ""
+    }
+  },
+  {
+    "id": 2,
+    "text": "<p>KRAV MAGA<br/> FÜR TEENS</p>",
+    "img": {
+      "alt": "",
+      "src": "img/Icons_main-02.png",
+      "title": ""
+    }
+  },
+  {
+    "id": 3,
+    "text": "<p>KICKBOXEN<br/> FÜR KIDS & TEENS</p>",
+    "img": {
+      "alt": "",
+      "src": "img/Icons_main-03.png",
+      "title": ""
+    }
+  },
+  {
+    "id": 4,
+    "text": "<p>SELBSTBEHAUPTUNG &<br/> SELBSTVERTEIDIGUNG<br/> FÜR KIDS</p>",
+    "img": {
+      "alt": "",
+      "src": "img/Icons_main-04.png",
+      "title": ""
+    }
+  },
+  {
+    "id": 5,
+    "text": "<p>KRAV MAGA<br/> NUR FÜR FRAUEN</p>",
+    "img": {
+      "alt": "",
+      "src": "img/Icons_main-05.png",
+      "title": ""
+    }
+  }
+
+]

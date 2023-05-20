@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "img": {
+      "src": "img/Icons_angebote_main-01.png",
+      "alt": "",
+      "title": ""
+    },
+    "title": "Für Behörden und bürgernahe Dienstleister",
+    "description": "Wir bieten Seminare speziell für Behörden und bürgernahe Dienstleister an. Inhalte der Seminare sind Kommunikation, Körpersprache, persönliches Auftreten, Deeskalation sowie Selbstbehauptung und Selbstverteidigung.",
+    "button": {
+      "text": "MEHR ERFAHREN",
+      "link": "/kinder"
+    }
+  },
+  {
+    "id": 2,
+    "img": {
+      "src": "img/Icons_angebote_main-02.png",
+      "alt": "",
+      "title": ""
+    },
+    "title": "Für Einsatz- und Rettungskräfte",
+    "description": "Für Einsatz- und Rettungskräfte bieten wir speziell abgestimmte Seminare mit Fokus auf die Eigensicherung und einsatzbezogener Selbstverteidigung an. Zusätzlich wird der Umgang mit den Führungs- und Einsatzmittel sowie taktisches Vorgehen praxisnah geübt.",
+    "button": {
+      "text": "MEHR ERFAHREN",
+      "link": "/kinder"
+    }
+  },
+  {
+    "id": 3,
+    "img": {
+      "src": "img/Icons_angebote_main-03.png",
+      "alt": "",
+      "title": ""
+    },
+    "title": "Für Kindergärten und Schulen",
+    "description": "Für Kindergärten bieten wir insbesondere ab dem Vorschulalter Kurse für Selbstbehauptung, kognitive Förderung sowie altersgerechte Selbstverteidigung an. Weiterhin bieten wir in Schulen auch Deeskalationstraining an.",
+    "button": {
+      "text": "MEHR ERFAHREN",
+      "link": "/kinder"
+    }
+  }
+]

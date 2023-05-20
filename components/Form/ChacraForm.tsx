@@ -91,8 +91,12 @@ export default function ChacraForm() {
       const result = await sendContactForm(values)
       try {
         // if (result.ok) {
-        const res = await axios.post('https://defensecombatives-de.vercel.app/api/users/addUser', {
+        const res = await axios.post('/api/users/addUser', {
           ...values,
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json'
+          },
         })
         toast.success('Daten gesendet!')
         setState(initialState)
