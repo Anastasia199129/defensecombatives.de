@@ -4,7 +4,7 @@ import Container from '../Container/Container'
 import s from './Hero.module.sass'
 
 export default function Hero() {
-  return <Container>
+  return <div className={s.wrapper}>
       <Carusel />
-    </Container>
+    </div>
 }
