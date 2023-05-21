@@ -1,10 +1,16 @@
 @import ../../styles/settings
 
-.section
-  background-image: url('/img/photo_2023-05-20_20-42-52.jpg')
-  background-size: cover
-  background-repeat: repeat
-  background-position: center center
+.wrapper
+  background-image: url('./img/background.jpg')
+  background-size:  1800px
+  background-repeat: no-repeat
+  background-position: center 155px
+  +r(0, 575)
+    padding-bottom: 64px
+  +r(576, 991)
+    padding-bottom: 96px
+  +r(992)
+    padding-bottom: 144px  
 
 .ul
   display: grid
@@ -28,7 +34,7 @@
       justify-content: center
 
       img
-        height: 200px
+        height: 150px
 
     .link
       display: flex
@@ -38,13 +44,13 @@
       color: $blue
 
       svg
-        width: 17px
+        width: 15px
 
     h4
       margin-bottom: 20px
-      font-weight: 500
-      font-size: 22px
-      color: $blue
+      // font-weight: 500
+      // font-size: 22px
+      // color: $blue
 
     p
       margin-bottom: 20px

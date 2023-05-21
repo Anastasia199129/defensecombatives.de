@@ -1,33 +1,57 @@
+import Link from 'next/link'
 import Container from '../Container/Container'
 import s from './Footer.module.sass'
 
+import data from './footer.json'
+import Image from 'next/image'
+
 export default function Footer() {
+  const { contacts, socialMedia, text } = data
+
   return (
-    <section className={s.section}>
+    <div className={s.section}>
       <Container>
-      <h3>Kontacte</h3>
-      <div>
-        <address className={s.address}>
-          <ul className={s.list}>
-            <li>
-              <a href='tel:017622651872'>
-                0176-22651872
-              </a>
-            </li>
-            <li>
-              <a href='tel:01782339741'>
-               0178-2339741
-              </a>
-            </li>
-            <li>
-              <a href='mailto:kontakt@defensecombatives.de'>
-                kontakt@defensecombatives.de
-              </a>
-            </li>
-          </ul>
-        </address>
-      </div>
+        <h3>Kontacte</h3>
+
+        <div className={s.wrapper}>
+
+          <address className={s.address}>
+            <ul className={s.list}>
+              {contacts?.map(({ id, link, img }) => (
+                <li key={id}>
+                  <Image
+                    width={40}
+                    height={40}
+                    src={img.src}
+                    title={img.title}
+                    alt={img.alt}
+                  />
+                  <Link href={link.href}>{link.content}</Link>
+                </li>
+              ))}
+            </ul>
+          </address>
+
+          <div className={s.socialMedia}>
+            <div
+              className={s.title}
+              dangerouslySetInnerHTML={{
+                __html: text,
+              }}
+            />
+            {socialMedia?.map(({ id, img }) => (
+              <Image
+                key={id}
+                width={40}
+                height={40}
+                src={img.src}
+                title={img.title}
+                alt={img.alt}
+              />
+            ))}
+          </div>
+        </div>
       </Container>
-    </section>
+    </div>
   )
 }

@@ -13,6 +13,7 @@ import UnsereKurse from '@/components/UnsereKurse/UnsereKurse'
 import Footer from '@/components/Footer/Footer'
 import SpezAngebote from '@/components/SpezAngebote/SpezAngebote'
 import Willkommen from '@/components/Willkommen/Willkommen'
+import Kmg from '@/components/Kmg/Kmg'
 
 // 2. У меня есть для вас не большое задание на 15 минут. Открой консоль
 // https://codeshare.io/5zeMz4 и расшарь экран. Реши задачку. Стиральный аппарат принимает монеты
@@ -53,8 +54,9 @@ export default function Home() {
         </Container> */}
         <UnsereKurse />
         <SpezAngebote/>
+        <Kmg/>
         {/* <New /> */}
-        <ChacraForm />
+        <ChacraForm backgroundImage={true}/>
         {/* <Form /> */}
         {/* <DemoCarousel/> */}
       </main>

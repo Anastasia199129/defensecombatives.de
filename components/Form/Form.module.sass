@@ -1,4 +1,34 @@
 @import ../../styles/settings
+
+.wrapper
+  background-image: url('./img/background.jpg')
+  background-size:  1800px
+  background-repeat: no-repeat
+  background-position: center -926px
+  +r(0, 575)
+    margin-bottom: 64px
+  +r(576, 991)
+    margin-bottom: 96px
+  +r(992)
+    margin-bottom: 144px  
+
+  h4
+    +r(0, 575)
+      margin-bottom: 20px
+    +r(576, 991)
+      margin-bottom: 30px
+    +r(992)
+      margin-bottom: 40px 
+.section  
+  +r(0, 575)
+    margin-top: 64px
+    margin-bottom: 64px
+  +r(576, 991)
+    margin-top: 96px
+    margin-bottom: 96px
+  +r(992)
+    margin-top: 144px
+    margin-bottom: 144px      
   
 .formContainer
   background-color: #000080

@@ -1,0 +1,42 @@
+@import ../../styles/settings
+  
+.wrapper
+  background-image: url('./img/background.jpg')
+  background-size:  1800px
+  background-repeat: no-repeat
+  background-position: center -646px
+  +r(0, 575)
+    padding-bottom: 64px
+  +r(576, 991)
+    padding-bottom: 96px
+  +r(992)
+    padding-bottom: 144px  
+
+  .flex
+    display: flex
+    align-items: flex-end
+    gap: 60px
+
+    .logoWrapper
+
+      .link
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        gap: 10px
+        margin-bottom: 5px
+        padding-right: 10px
+        color: $blue
+
+      svg
+        width: 15px
+
+      img
+        width: 200px
+
+    .rightSideWrapper
+      display: flex
+      flex-direction: column   
+
+      h4
+        color: $blue 

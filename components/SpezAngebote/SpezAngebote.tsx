@@ -8,9 +8,9 @@ import Arrow from './Arrow'
 
 export default function SpezAngebote() {
   return (
-    <section className={s.section}>
+    <div className={s.wrapper}>
     <Container>
-
+  
         <Title title='unsere speziellen angebote'/>
         <ul className={s.ul}>
           {data &&
@@ -38,6 +38,6 @@ export default function SpezAngebote() {
         </ul>
   
     </Container>
-    </section>
+    </div>
   )
 }

@@ -1,5 +1,29 @@
 @import ../../styles/settings
   
-// .wrapper
-//   +r(992, 1266)
-//     max-width: 1299px
+.wrapper
+  margin: 0 auto
+  +r(0, 1498)
+    width: 100%
+
+  +r(1266)
+    max-width: 1499px
+
+  > .slick-slide
+    display: flex
+    align-items: center
+    justify-content: center  
+
+  img
+    width: 100%  
+
+  // .next
+  //   width: 30px
+  //   height: 30px
+  //   background-color: red
+
+  //   &::before
+  //     content: "\2190"
+  //     width: 20px
+  //     height: 20px
+  //     background-color: grey
+

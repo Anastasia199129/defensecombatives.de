@@ -15,6 +15,10 @@ import { useState } from 'react'
 
 import s from './Form.module.sass'
 
+interface Props {
+  backgroundImage?: boolean
+}
+
 const initValues = {
   name: '',
   nachname: '',
@@ -25,7 +29,7 @@ const initValues = {
 
 const initialState = { values: initValues, isLoading: false }
 
-export default function ChacraForm() {
+export default function ChacraForm({ backgroundImage = false }: Props) {
   const [state, setState] = useState(initialState)
   const [touched, setTouched] = useState({
     name: false,
@@ -95,7 +99,7 @@ export default function ChacraForm() {
           ...values,
           headers: {
             'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
           },
         })
         toast.success('Daten gesendet!')
@@ -127,84 +131,92 @@ export default function ChacraForm() {
   // return  <button onClick={getAllUsers}>get All</button>
 
   return (
-    <MyContainer>
-      <form onSubmit={onSubmit} className={s.formContainer}>
-        <Container className={s.form} maxW='100%'>
-          <FormControl
-            isRequired
-            isInvalid={!values.name && touched.name}
-            mb={5}
-          >
-            <FormLabel>Name</FormLabel>
-            <Input
-              type='text'
-              name='name'
-              value={values.name}
-              onChange={handleChange}
-              onBlur={onBlur}
-            />
-            <FormErrorMessage>Obligatorisch</FormErrorMessage>
-          </FormControl>
-          <FormControl
-            isRequired
-            isInvalid={!values.nachname && touched.nachname}
-            mb={5}
-          >
-            <FormLabel>Nachname</FormLabel>
-            <Input
-              type='text'
-              name='nachname'
-              value={values.nachname}
-              onChange={handleChange}
-              onBlur={onBlur}
-            />
-            <FormErrorMessage>Obligatorisch</FormErrorMessage>
-          </FormControl>
-          <FormControl
-            isRequired
-            isInvalid={!values.email && touched.email}
-            mb={5}
-          >
-            <FormLabel>E-Mail</FormLabel>
-            <Input
-              type='email'
-              name='email'
-              value={values.email}
-              onChange={handleChange}
-              onBlur={onBlur}
-            />
-            <FormErrorMessage>Obligatorisch</FormErrorMessage>
-          </FormControl>
+    <div className={`${backgroundImage ? s.wrapper : s.section}`}>
+      <MyContainer>
+      {backgroundImage && (
+        <h4>
+          Hinterlassen Sie eine Anfrage und wir sagen Ihnen, was Sie brauchen,
+          um mit den Kursen zu beginnen!
+        </h4>
+      )}
+        <form onSubmit={onSubmit} className={s.formContainer}>
+          <Container className={s.form} maxW='100%'>
+            <FormControl
+              isRequired
+              isInvalid={!values.name && touched.name}
+              mb={5}
+            >
+              <FormLabel>Name</FormLabel>
+              <Input
+                type='text'
+                name='name'
+                value={values.name}
+                onChange={handleChange}
+                onBlur={onBlur}
+              />
+              <FormErrorMessage>Obligatorisch</FormErrorMessage>
+            </FormControl>
+            <FormControl
+              isRequired
+              isInvalid={!values.nachname && touched.nachname}
+              mb={5}
+            >
+              <FormLabel>Nachname</FormLabel>
+              <Input
+                type='text'
+                name='nachname'
+                value={values.nachname}
+                onChange={handleChange}
+                onBlur={onBlur}
+              />
+              <FormErrorMessage>Obligatorisch</FormErrorMessage>
+            </FormControl>
+            <FormControl
+              isRequired
+              isInvalid={!values.email && touched.email}
+              mb={5}
+            >
+              <FormLabel>E-Mail</FormLabel>
+              <Input
+                type='email'
+                name='email'
+                value={values.email}
+                onChange={handleChange}
+                onBlur={onBlur}
+              />
+              <FormErrorMessage>Obligatorisch</FormErrorMessage>
+            </FormControl>
 
-          <FormControl mb={5}>
-            <FormLabel>Telefon</FormLabel>
-            <Input
-              type='number'
-              name='number'
-              value={values.number}
-              onChange={handleChange}
-            />
-          </FormControl>
-          <FormControl mb={5}>
-            <FormLabel>Nachricht</FormLabel>
-            <Textarea
-              name='nachricht'
-              rows={4}
-              value={values.nachricht}
-              onChange={handleChangeTextarea}
-            />
-          </FormControl>
-        </Container>
-        {/* <button>kjojl</button> */}
-        <Button
-          className={s.button}
-          isLoading={isLoading}
-          disabled={!values.name || !values.email || !values.nachname}
-          onClick={onSubmit}
-        >
-          Schicken
-        </Button>
-      </form>
-    </MyContainer>
+            <FormControl mb={5}>
+              <FormLabel>Telefon</FormLabel>
+              <Input
+                type='number'
+                name='number'
+                value={values.number}
+                onChange={handleChange}
+              />
+            </FormControl>
+            <FormControl mb={5}>
+              <FormLabel>Nachricht</FormLabel>
+              <Textarea
+                name='nachricht'
+                rows={4}
+                value={values.nachricht}
+                onChange={handleChangeTextarea}
+              />
+            </FormControl>
+          </Container>
+          {/* <button>kjojl</button> */}
+          <Button
+            className={s.button}
+            isLoading={isLoading}
+            disabled={!values.name || !values.email || !values.nachname}
+            onClick={onSubmit}
+          >
+            Schicken
+          </Button>
+        </form>
+      </MyContainer>
+    </div>
   )
 }
