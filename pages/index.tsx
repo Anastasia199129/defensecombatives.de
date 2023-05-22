@@ -15,6 +15,7 @@ import SpezAngebote from '@/components/SpezAngebote/SpezAngebote'
 import Willkommen from '@/components/Willkommen/Willkommen'
 import Kmg from '@/components/Kmg/Kmg'
 import CustomHead from '@/components/CustomHead/CustomHead'
+import TrainingBaner from '@/components/TrainingBaner.tsx/TrainingBaner'
 
 // 2. У меня есть для вас не большое задание на 15 минут. Открой консоль
 // https://codeshare.io/5zeMz4 и расшарь экран. Реши задачку. Стиральный аппарат принимает монеты
@@ -43,8 +44,9 @@ export default function Home() {
 <CustomHead/>
       <Header />
       <main>
-        <Hero />
+        <Hero data={{title: '', subtitle: '', text: ''}}/>
         <Willkommen/>
+        <TrainingBaner/>
         {/* <Container>
           <Carusel/>
         </Container> */}

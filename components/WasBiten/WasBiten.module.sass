@@ -1,0 +1,74 @@
+@import ../../styles/settings
+
+.section
+
+  .wrapper
+
+    .cardWrapper
+      padding-top: 60px
+      padding-bottom: 60px
+
+      h3
+        text-transform: uppercase
+        margin-bottom: 30px
+        max-width: 565px
+
+      &:nth-child(even)
+        background-color: $greyLight
+              
+        .card
+          display: grid
+          justify-content: space-between
+          grid-template-columns: 40% 60%
+          grid-gap: 20px
+
+          .imgWrapper
+            justify-content: flex-start  
+
+      &:nth-child(odd) 
+
+        .card
+          display: grid
+          justify-content: space-between
+          grid-template-columns: 60% 40% 
+          grid-gap: 20px
+
+          .imgWrapper
+            justify-content: flex-end
+
+            &:first-child
+              grid-row: 1
+              grid-column: 2
+
+          .contentWrapper
+
+            &:last-child
+              grid-row: 1
+              grid-column: 1 
+
+    .imgWrapper
+      display: flex
+      align-items: center
+      
+      img
+        width: 320px
+
+    .price
+      color: $orange
+      margin-top: 30px
+
+      p 
+        position: relative
+        padding-left: 60px
+        max-width: 436px
+
+        &::before
+          position: absolute
+          content: url('./img/coin.svg')
+          top: 0
+          left: 0
+          width: 50px
+          height: 50px 
+
+        span
+          font-weight: 500    

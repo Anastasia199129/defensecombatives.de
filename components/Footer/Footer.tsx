@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <div className={s.section}>
       <Container>
-        <h3>Kontacte</h3>
+        <p className={s.contactTitle}>Kontacte</p>
 
         <div className={s.wrapper}>
 

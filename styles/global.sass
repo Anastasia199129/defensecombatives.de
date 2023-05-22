@@ -23,14 +23,28 @@ li
 a
   text-decoration: none
 
-// h3
-//   font-weight: 500
-//   font-size: 24px
-//   color: $blue   
+h1
+  font-family: $r
+  font-weight: bold
+  line-height: 1.2
+  letter-spacing: -0.02em
+  color: $blue
+  margin: 0px
+  +r(0, 575)
+    font-size: 36px
+  +r(576, 991)
+    font-size: 46px
+  +r(992)
+    font-size: 56px 
 
-h4
+h2
+  font-size: 32px
   font-weight: 500
-  font-size: 22px
+  color: $blue
+
+h3
+  font-weight: 500
+  font-size: 24px
   color: $blue  
 
 section
@@ -42,4 +56,4 @@ section
     margin-bottom: 96px
   +r(992)
     margin-top: 144px
-    margin-bottom: 144px  
+    margin-bottom: 144px
