@@ -6,12 +6,9 @@
 
     .cardWrapper
       padding-top: 60px
-      padding-bottom: 60px
 
-      h3
-        text-transform: uppercase
-        margin-bottom: 30px
-        max-width: 565px
+      &:not(:last-child)
+        padding-bottom: 60px
 
       &:nth-child(even)
         background-color: $greyLight
@@ -45,6 +42,11 @@
             &:last-child
               grid-row: 1
               grid-column: 1 
+
+    h3
+      text-transform: uppercase
+      margin-bottom: 30px
+      max-width: 565px          
 
     .imgWrapper
       display: flex
