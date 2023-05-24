@@ -133,12 +133,10 @@ export default function ChacraForm({ backgroundImage = false }: Props) {
   return (
     <div className={`${backgroundImage ? s.wrapper : s.section}`}>
       <MyContainer>
-      {backgroundImage && (
         <h4>
           Hinterlassen Sie eine Anfrage und wir sagen Ihnen, was Sie brauchen,
           um mit den Kursen zu beginnen!
         </h4>
-      )}
         <form onSubmit={onSubmit} className={s.formContainer}>
           <Container className={s.form} maxW='100%'>
             <FormControl

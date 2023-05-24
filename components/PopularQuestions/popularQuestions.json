@@ -1,0 +1,25 @@
+{
+  "mainTitle": "Populäre fragen",
+  "list": [
+    {
+      "id": "1",
+      "title": "Ab welchem Alter können Kinder bei uns trainieren?",
+      "text": "Die Kinder Kurse sind für die Altersgruppe von 5-9 Jahren. Die Jugendlichen können ab 10 Jahren bei uns trainieren."
+    },
+    {
+      "id": "2",
+      "title": "Wie melde ich mein Kind für einen Kurs an?",
+      "text": "Bitte senden Sie uns eine E-Mail an kontakt@defensecombatives.de oder schicken Sie uns eine Anfrage über das Kontaktformular. Zeitnah werden Sie das Anmeldeformular von uns per E-Mail erhalten."
+    },
+    {
+      "id": "3",
+      "title": "Wie ist der weitere Ablauf?",
+      "text": "Nach erfolgreicher Anmeldung durch das Anmeldeformular übersenden wir Ihnen einen genauen Ablauf zu den Kursen mit allen weiteren Informationen."
+    },
+    {
+      "id": "4",
+      "title": "Ist Krav Maga für Kinder und Jugendliche geeignet?",
+      "text": "Auf jeden Fall! Krav Maga arbeitet mit wenigen und natürlichen Bewegungen, Methoden und Taktiken– damit sich auch körperlich schwächere verteidigen können. Dazu lernen Kinder und Jugendliche Ihren Körper und Ihre körperlichen Fähigkeiten besser kennen und sich besser zu konzentrieren sowie den guten Umgang miteinander. Die Effekte vom Krav Maga wie ein besseres Selbstbewusstsein sind gerade für Kinder und Jugendliche sehr Entwicklungsfördernd."
+    }
+  ]
+}

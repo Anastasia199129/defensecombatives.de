@@ -8,6 +8,9 @@ import WasBiten from '@/components/WasBiten/WasBiten'
 import ForKidsSchool from '@/components/ForKidsSchool/ForKidsSchool'
 import QuoresSection from '@/components/QuoresSection/QuoresSection'
 import BanerKidsAngebot from '@/components/BanerKidsAngebot/BanerKidsAngebot'
+import TrainingSessions from '@/components/TrainingSessions/TrainingSessions'
+import PopularQuestions from '@/components/PopularQuestions/PopularQuestions'
+import ChacraForm from '@/components/Form/ChacraForm'
 export default function Startseite() {
   return <>
   <Header/>
@@ -17,6 +20,9 @@ export default function Startseite() {
   <BanerKidsAngebot/>
   <ForKidsSchool/>
   <QuoresSection/>
+  <TrainingSessions/>
+  <PopularQuestions/>
+  <ChacraForm/>
   <Footer/>
   </>
 }
