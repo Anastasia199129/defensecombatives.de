@@ -56,7 +56,7 @@ export default function Hero({ data, type }: Props) {
 
   return (
     <>
-      {!data.title && !data.text ? (
+      {!data.title ? (
         <div className={s.wrapper}>
           <Slider ref={sliderRef} {...settings}>
             {items.map((item) => (
@@ -72,7 +72,7 @@ export default function Hero({ data, type }: Props) {
         </div>
       ) : (
         <div
-          className={`${s.baner} ${type === 'kinder' ? s.kinder : ''}`}
+          className={`${s.baner} ${type === 'kinder' ? s.kinder : type ==='frauen' ? s.frauen : '' }`}
           style={{ backgroundImage: `url(${data.backgroundImmage})` }}
         >
           <Container>
