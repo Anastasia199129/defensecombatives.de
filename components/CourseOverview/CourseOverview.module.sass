@@ -1,0 +1,41 @@
+@import ../../styles/settings
+
+.section
+  font-family: $r
+
+  h2
+    text-transform: uppercase
+    margin-bottom: 52px
+
+  ul
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr
+    column-gap: 20px
+    row-gap: 50px
+
+    li
+      position: relative
+      border-radius: 12px
+      border: 1px solid $redLight
+      padding: 30px
+      min-height: 230px
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+
+      &:nth-child(even)
+        color: $white
+        background-color: $redLight
+
+      &::before
+        position: absolute
+        content: url('./img/tick.svg')
+        width: 50px
+        height: 50px
+        top: -24px
+        left: 50%
+        transform: translateX(-50%)
+        // left: 0
+        // right: 0

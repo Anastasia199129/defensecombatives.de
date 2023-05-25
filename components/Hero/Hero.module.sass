@@ -17,40 +17,39 @@
   min-width: 320px
   max-width: 1600px
   width: 100%
-  height: 450px
-  padding: 118px 0
-  margin-right: auto
-  margin-left: auto
+  margin: 0 auto
   background-size: cover
   background-repeat: no-repeat
   background-position: center
 
+  .heroContent
+    height: 600px
+    display: flex
+    flex-direction: column
+    justify-content: center
+
   h1
     margin-bottom: 10px
     max-width: 545px
-    
+
   .text
     font-size: 20px
 
 .kinder
   position: relative
 
-  &::after
-    position: absolute
-    content: url(./img/lapka.svg)
-    width: 60px
-    bottom: 30px
-    right: 60px
+  // &::after
+  //   position: absolute
+  //   content: url(./img/lapka.svg)
+  //   width: 60px
+  //   bottom: 30px
+  //   right: 60px
 
   h2
     margin-bottom: 10px
     color: $orange
 
-.frauen 
+.frauen
 
   h2
-    color: $redLight 
-      
-      
-
-      
+    color: $redLight

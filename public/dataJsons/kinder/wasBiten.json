@@ -1,0 +1,38 @@
+{
+  "title": "WAS BIETEN WIR AN",
+  "cards": [
+    {
+      "id": "1",
+      "title": "Selbstbehauptung und selbstverteidigung für kinder",
+      "content": "Kinder gelten als besonders schützenswert. In der heutigen Zeit ist es wichtiger denn je, dass Kinder wissen was zu tun ist, wenn jemand ihnen zu nahekommt. Der Fokus unserer Kurse liegt darauf, spielerisch das Selbstbewusstsein der Kinder zu stärken, Selbstbehauptung zu erlernen und ein Gefahrenradar zu entwickeln. Lässt sich eine Gefahr nicht vermeiden, erlernen die Kinder auf Grundlage von Krav Maga altersgerechte Selbstverteidigung. Unser Kurs für Kinder richtet sich besonders an die Vorschulkinder ab 5 bis 9 Jahren.",
+      "price": "<p>Die Kosten für den Kinder Kurs betragen <span>50 Euro für 5 Einheiten a 60 Minuten</span></p>",
+      "img": {
+        "src": "/img/kids_pictures-02.png",
+        "title": "kids_pictures",
+        "alt": "kids_pictures"
+      }
+    },
+    {
+      "id": "2",
+      "title": "Krav maga für jugendliche",
+      "content": "Im Krav Maga für Jugendliche liegt der Fokus auf Selbstverteidigung. Durch körperliches Training wird das Selbstbewusstsein der Jugendlichen gestärkt, Selbstbehauptung erlernt und ein Gefahrenradar entwickelt, sowie die Stärke des eigenen Körpers in das Bewusstsein gerufen. Der Schwerpunkt im Krav Maga liegt auf körperlicher Anstrengung um eine Stresssituation zu simulieren und im Ernstfall zu funktionieren und durchzuhalten. Im Krav Maga gibt es kein Regelwerk. Die einzige Regel: “Unbeschadet bleiben und sicher nach Hause kommen!“",
+      "price": "<p>Die Kosten für Krav Maga für Jugendliche betragen <span>50 Euro für 5 Einheiten a 60 Minuten</span></p>",
+      "img": {
+        "src": "/img/kids_pictures-01.png",
+        "title": "kids_pictures",
+        "alt": "kids_pictures"
+      }
+    },
+    {
+      "id": "3",
+      "title": "Kickboxen für kinder und jugendliche von 5-15 jahren",
+      "content": "Im Kickboxen für Kinder und Jugendliche werden die grundlegenden Schlag- und Tritttechniken vermittelt. Spielerisch und altersgemäß wird außerdem die Kondition, Geschicklichkeit, Dynamik und Koordination verbessert. Auch Themen wie Respekt und Sicherheit werden behandelt. Somit wird mit Spiel, Spaß und Disziplin das Selbstbewusstsein der Kinder gestärkt.",
+      "price": "<p>Die Kosten für den Kurs betragen <span>50 Euro für 5 Einheiten a 60 Minuten</span></p>",
+      "img": {
+        "src": "/img/kids_pictures-03.png",
+        "title": "kids_pictures",
+        "alt": "kids_pictures"
+      }
+    }
+  ]
+}

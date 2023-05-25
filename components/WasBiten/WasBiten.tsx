@@ -1,14 +1,35 @@
+import { title } from 'process'
 import Container from '../Container/Container'
-import data from './wasBiten.json'
 
 import s from './WasBiten.module.sass'
 
-export default function WasBiten() {
+interface Props {
+  data: {
+    title?: string
+    cards: {
+      id: string
+      price: string
+      content: string
+      title: string
+      img: {
+        src: string
+        alt: string
+        title: string
+      }
+    }[]
+  }
+  type?: string
+}
+
+export default function WasBiten({ data, type }: Props) {
+
   return (
     <section className={s.section}>
-      <Container>
-        <h2>{data.title}</h2>
-      </Container>
+      {data.title && (
+        <Container>
+          <h2>{data.title}</h2>
+        </Container>
+      )}
       <div className={s.wrapper}>
         {data.cards.map(({ id, price, content, title, img }) => (
           <div className={s.cardWrapper} key={id}>
@@ -21,8 +42,8 @@ export default function WasBiten() {
                 <div className={s.contentWrapper}>
                   <h3>{title}</h3>
                   <p>{content}</p>
-                  <div 
-                    className={s.price}
+                  <div
+                    className={`${s.price} ${type === 'frauen' ? s.priceFrauen : s.priceKids}`}
                     dangerouslySetInnerHTML={{
                       __html: price,
                     }}

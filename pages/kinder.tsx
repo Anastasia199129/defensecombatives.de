@@ -12,19 +12,21 @@ import PopularQuestions from '@/components/PopularQuestions/PopularQuestions'
 import ChacraForm from '@/components/Form/ChacraForm'
 
 import heroData from '../public/dataJsons/kinder/hero.json'
-import gradientAndCardsJson from '../public/dataJsons/kinder/gradientAndCards.json'
+import gradientAndCardsData from '../public/dataJsons/kinder/gradientAndCards.json'
+import wasBitemData from '../public/dataJsons/kinder/wasBiten.json'
+import trainingSessionsData from '../public/dataJsons/kinder/trainingSessions.json'
 
 export default function Startseite() {
   return (
     <>
       <Header />
       <Hero data={heroData} type='kinder' />
-      <GradientAndCards data={gradientAndCardsJson} />
-      <WasBiten />
+      <GradientAndCards data={gradientAndCardsData} />
+      <WasBiten data={wasBitemData}/>
       <BanerKidsAngebot />
       <ForKidsSchool />
       <QuoresSection />
-      <TrainingSessions />
+      <TrainingSessions data={trainingSessionsData}/>
       <PopularQuestions />
       <ChacraForm />
       <Footer />

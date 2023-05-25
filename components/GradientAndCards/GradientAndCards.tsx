@@ -14,7 +14,7 @@ interface Props {
   type?: string
 }
 
-export default function GradientAndCards({ data, type }: Props) {
+export default function GradientAndCards ({ data, type }: Props) {
   return (
     <div className={`${s.section} ${type === 'frauen' ? s.frauen : s.kinder}`}>
       <Container>

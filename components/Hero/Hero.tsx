@@ -60,11 +60,7 @@ export default function Hero({ data, type }: Props) {
         <div className={s.wrapper}>
           <Slider ref={sliderRef} {...settings}>
             {items.map((item) => (
-              <Link
-                href='/kinder'
-                // className={s.wrapperImg}
-                key={item.id}
-              >
+              <Link href='/kinder' key={item.id}>
                 <img src={item.imageUrl} alt={`Slide ${item.id}`} />
               </Link>
             ))}
@@ -72,20 +68,24 @@ export default function Hero({ data, type }: Props) {
         </div>
       ) : (
         <div
-          className={`${s.baner} ${type === 'kinder' ? s.kinder : type ==='frauen' ? s.frauen : '' }`}
+          className={`${s.baner} ${
+            type === 'kinder' ? s.kinder : type === 'frauen' ? s.frauen : ''
+          }`}
           style={{ backgroundImage: `url(${data.backgroundImmage})` }}
         >
           <Container>
-            <h1>{data?.title}</h1>
-            <h2>{data.subtitle}</h2>
-            {data.text && (
-              <div
-                className={s.text}
-                dangerouslySetInnerHTML={{
-                  __html: data.text,
-                }}
-              />
-            )}
+            <div className={s.heroContent}>
+              <h1>{data?.title}</h1>
+              <h2>{data.subtitle}</h2>
+              {data.text && (
+                <div
+                  className={s.text}
+                  dangerouslySetInnerHTML={{
+                    __html: data.text,
+                  }}
+                />
+              )}
+            </div>
           </Container>
         </div>
       )}
