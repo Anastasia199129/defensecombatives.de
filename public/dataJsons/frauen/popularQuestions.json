@@ -1,0 +1,15 @@
+{
+  "mainTitle": "Populäre fragen",
+  "list": [
+    {
+      "id": "1",
+      "title": "Wie kann ich mich für den Kurs anmelden?",
+      "text": "Bitte senden Sie uns eine E-Mail an kontakt@defensecombatives.de oder schicken Sie uns eine Anfrage über das Kontaktformular. Zeitnah werden Sie das Anmeldeformular von uns per E-Mail erhalten."
+    },
+    {
+      "id": "2",
+      "title": "Welche Voraussetzungen benötige ich um an dem Kurs teilzunehmen?",
+      "text": "Sie benötigen keine Vorkenntnisse. Es ist egal, welches Alter oder körperliche Fitness Sie haben. Wenn Sie lernen möchten, wie sie sich einfach und effektiv selbstverteidigen können und Spaß am Training in der Gruppe haben, sind Sie bei uns genau richtig. Die einzige Voraussetzung ist Sportgesundheit."
+    }
+  ]
+}

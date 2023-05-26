@@ -11,12 +11,13 @@ interface Props {
       alt: string
       title: string
     }[]
-  }
+  },
+  type?: string
 }
 
-export default function TrainingSessions({ data }: Props) {
+export default function TrainingSessions({ data, type }: Props) {
   return (
-    <section className={s.section}>
+    <section className={`${s.section} ${type === 'grey' ? s.baclgroundGrey : ''}`}>
       <Container>
         <Title title={data.title} />
         <div className={s.flex}>
