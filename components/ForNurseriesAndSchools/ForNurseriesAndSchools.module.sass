@@ -1,0 +1,30 @@
+@import ../../styles/settings
+
+.section
+  position: relative
+  background-color: $greyLight
+  padding: 60px 0px
+
+  &::before
+    position: absolute
+    content: url('./img/behörden_icons-02.png')   
+    width: 30px
+    height: 30px
+    top: 20px
+    left: 50%
+    transform: translateX(-50%) 
+
+  h3
+    position: relative
+    padding-left: 30px
+    margin-bottom: 30px
+
+    &::before
+      position: absolute
+      content: url('./img/link_arrow.svg')   
+      width: 15px
+      height: 15px
+      top: 2px
+      left: 0
+      // left: 50%
+      // transform: translateX(-50%) 

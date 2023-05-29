@@ -69,7 +69,7 @@ export default function Hero({ data, type }: Props) {
       ) : (
         <div
           className={`${s.baner} ${
-            type === 'kinder' ? s.kinder : type === 'frauen' ? s.frauen : ''
+            type === 'kinder' ? s.kinder : type === 'frauen' ? s.frauen : type ===  'behorden' ? s.behorden : ''
           }`}
           style={{ backgroundImage: `url(${data.backgroundImmage})` }}
         >

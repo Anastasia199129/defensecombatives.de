@@ -137,7 +137,9 @@ export default function ChacraForm({ backgroundImage = false }: Props) {
           Hinterlassen Sie eine Anfrage und wir sagen Ihnen, was Sie brauchen,
           um mit den Kursen zu beginnen!
         </h4>
-        <form onSubmit={onSubmit} className={s.formContainer}>
+        <form 
+        // onSubmit={onSubmit}
+         className={s.formContainer}>
           <Container className={s.form} maxW='100%'>
             <FormControl
               isRequired
