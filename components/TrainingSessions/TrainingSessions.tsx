@@ -24,7 +24,7 @@ export default function TrainingSessions({ data, type }: Props) {
         {data.subtitle && <h3 className={s.subtitle}>{data.subtitle}</h3>}
         <div className={s.flex}>
           {data?.images.map(({ src, title, alt }, i) => (
-            <div key={i} className={s.imgWrapper}>
+            <div key={i} className={`${type === 'behorden' ? s.imgWrapperBehorden : s.imgWrapper}`}>
               <img src={src} alt={alt} title={title} />
             </div>
           ))}

@@ -25,6 +25,7 @@ export default function GradientAndCards ({ data, type }: Props) {
               {type !== 'frauen' ? (
                 <div className={s.wrapperImg}>
                   <Lapka />
+                  <span className={s.number}>{i + 1}</span>
                 </div>
               ) : (
                 <span className={s.number}>{i + 1}</span>

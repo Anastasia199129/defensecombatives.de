@@ -25,7 +25,7 @@ export default function UeberUns() {
   <OurOffers/>
   {/* <ForNurseriesAndSchools/> */}
   <YellowLine/>
-  <TrainingSessions data={trainingSessionInstructorData}/>
+  <TrainingSessions type='behorden' data={trainingSessionInstructorData}/>
   <TrainingSessions data={trainingSessionTrainingData}/>
   <ChacraForm/>
   <Footer/>
