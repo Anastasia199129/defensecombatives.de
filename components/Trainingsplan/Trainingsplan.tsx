@@ -14,7 +14,7 @@ export default function Trainingsplan() {
         <div className={s.imgSection}>
           {/* <Container> */}
           <div className={s.imgWrapper}>
-            <img src='public/img/schedule.jpg' title='schedule' alt='schedule' />
+            <img src='img/schedule.jpg' title='schedule' alt='schedule' />
           </div>
           {/* </Container> */}
         </div>
