@@ -1,0 +1,43 @@
+@import ../../styles/settings
+
+.section
+  font-family: $r
+  background-color: $blue
+  background: linear-gradient(to right, $blue 50%, $blueLight 50%)
+
+  .wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr
+
+    .card
+      padding: 100px 20px 100px 60px
+      position: relative
+      color: $white
+
+      &:first-child
+
+        &::before
+          content: url(./img/contacts.svg)
+
+      &:last-child
+
+        &::before
+          content: url(./img/location.svg)
+
+      &::before
+        position: absolute
+        width: 70px
+        left: 0
+        top: 30px
+
+      li
+        &:not(:last-child)
+          margin-bottom: 20px
+
+      address
+        font-style: normal
+
+      h3
+        color: $white
+        text-transform: uppercase
+        margin-bottom: 30px
