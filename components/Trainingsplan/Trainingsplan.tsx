@@ -1,5 +1,6 @@
 import Container from '../Container/Container'
-import RegistrationAndTraining from '../RegistrationAndTraining/RegistrationAndTraining'
+
+import data from './trainingsplan.json'
 
 import s from './Trainingsplan.module.sass'
 
@@ -8,20 +9,15 @@ export default function Trainingsplan() {
     <div className={s.wrapper}>
       <Container>
         <div className={s.section}>
-          <h1>Trainingsplan</h1>
+          <h1>{data.title}</h1>
         </div>
 
         <div className={s.imgSection}>
-          {/* <Container> */}
           <div className={s.imgWrapper}>
-            <img src='img/schedule.jpg' title='schedule' alt='schedule' />
+            <img src={data.img.src} title={data.img.title} alt={data.img.alt} />
           </div>
-          {/* </Container> */}
         </div>
       </Container>
-      {/* <div className={s.absolute}>
-        <RegistrationAndTraining />
-      </div> */}
     </div>
   )
 }
