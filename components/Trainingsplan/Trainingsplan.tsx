@@ -17,6 +17,7 @@ export default function Trainingsplan() {
             <img src={data.img.src} title={data.img.title} alt={data.img.alt} />
           </div>
         </div>
+        
       </Container>
     </div>
   )
