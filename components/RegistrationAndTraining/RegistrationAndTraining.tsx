@@ -1,12 +1,17 @@
 import Link from 'next/link'
 import Container from '../Container/Container'
+
 import s from './RegistrationAndTraining.module.sass'
 
-export default function RegistrationAndTraining() {
+interface Props {
+  type?: string
+}
+
+export default function RegistrationAndTraining({type}:Props) {
   return (
-    <div className={s.section}>
+    <div className={`${s.section} ${type === 'uber_uns' ? s.sectionUber_uns : s.sectionWrapper}`}>
       <Container>
-        <div className={s.wrapper}>
+        <div className={`${type === 'uber_uns' ? s.uber_uns : s.wrapper} `}>
 
           <div className={s.card}>
             <h3>Vorherige anmeldung erforderlich</h3>

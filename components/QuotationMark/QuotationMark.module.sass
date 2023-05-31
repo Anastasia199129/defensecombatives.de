@@ -1,0 +1,17 @@
+@import ../../styles/settings
+
+.section
+  background: linear-gradient(to right, $blue 40%, $white 60%) 
+
+  .quotesWrapper
+    position: relative
+    height: 250px
+    background: linear-gradient(to right, $blue 10%, $white 0%) 
+    
+    &::before
+      position: absolute
+      content: url('./img/quotes.svg') 
+      width: 60px
+      height: 50px
+      top: 34px
+      left: 10px

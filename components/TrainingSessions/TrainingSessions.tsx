@@ -22,7 +22,7 @@ export default function TrainingSessions({ data, type }: Props) {
       <Container>
         <Title title={data.title} />
         {data.subtitle && <h3 className={s.subtitle}>{data.subtitle}</h3>}
-        <div className={s.flex}>
+        <div className={`${type === 'uber_uns' ? s.uber_uns : s.flex}`}>
           {data?.images.map(({ src, title, alt }, i) => (
             <div key={i} className={`${type === 'behorden' ? s.imgWrapperBehorden : s.imgWrapper}`}>
               <img src={src} alt={alt} title={title} />

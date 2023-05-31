@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "text": "Durch die Eignung zum Ausbilder von der Industrie- und Handelskammer Darmstadt besitzt André die Genehmigung und Zertifizierung durch das Regierungspräsidium Darmstadt seine Kolleginnen und Kollegen an ihren Einsatzmitteln und in Selbstverteidigung ausbilden zu dürfen.",
+    "img": {
+      "src": "/img/uber_uns_medal-01.svg",
+      "text": "uber_uns_medal",
+      "alt": "uber_uns_medal"
+    }
+  },
+  {
+    "id": "2",
+    "text": "Beim Bundesverband für Gewaltprävention hat er die Fachkraft für Gewaltprävention sowie den geprüften Selbstverteidigungslehrer erfolgreich absolviert.",
+    "img": {
+      "src": "img/uber_uns_medal-02.svg",
+      "text": "uber_uns_medal",
+      "alt": "uber_uns_medal"
+    }
+  },
+  {
+    "id": "3",
+    "text": "Im November 2022 hat André seinen Krav Maga Instructor bei Krav Maga Global erfolgreich abgeschlossen. Der Lehrgang beinhaltet drei Module und umfasst insgesamt 188 Stunden. Durch erfolgreiches Ablegen der Prüfung sind wir befugt einen offiziellen Krav Maga Global Standort zu eröffnen.",
+    "img": {
+      "src": "img/uber_uns_medal-01.svg",
+      "text": "uber_uns_medal",
+      "alt": "uber_uns_medal"
+    }
+  }
+]

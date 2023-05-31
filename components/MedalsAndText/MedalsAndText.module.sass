@@ -1,0 +1,30 @@
+@import ../../styles/settings
+
+.cardWrapper
+  font-family: $r
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  column-gap: 30px
+
+  .card
+    position: relative
+    padding: 80px 30px 40px 30px
+    background-color: $greyLight
+
+    &:nth-child(even)
+
+      img
+        width: 80px
+        top: -45px
+
+    
+    &:nth-child(odd) 
+      
+      img
+        width: 60px 
+        top: -25px
+            
+    img
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
