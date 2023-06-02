@@ -48,10 +48,11 @@ export default function Hero({ data, type }: Props) {
   }
 
   const items = [
-    { id: 0, path: '/kinder', imageUrl: 'photo_2023-05-01_13-51-14.jpg' },
-    { id: 1, path: '/kinder', imageUrl: 'photo_2023-05-01_13-51-17.jpg' },
-    { id: 2, path: '/kinder', imageUrl: 'photo_2023-05-01_13-51-20.jpg' },
-    { id: 3, path: '/kinder', imageUrl: 'photo_2023-05-01_13-51-23.jpg' },
+    { id: 0, path: '/kinder', imageUrl: 'angebot banners_-01.jpg' },
+    { id: 1, path: '/kinder', imageUrl: 'angebot banners_-02.jpg' },
+    { id: 2, path: '/kinder', imageUrl: 'angebot banners_-03.jpg' },
+    { id: 3, path: '/kinder', imageUrl: 'angebot banners_-04.jpg' },
+    { id: 3, path: '/kinder', imageUrl: 'angebot banners_-05.jpg' },
   ]
 
   return (
