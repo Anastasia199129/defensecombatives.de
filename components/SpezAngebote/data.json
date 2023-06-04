@@ -10,7 +10,7 @@
     "description": "Wir bieten Seminare speziell für Behörden und bürgernahe Dienstleister an. Inhalte der Seminare sind Kommunikation, Körpersprache, persönliches Auftreten, Deeskalation sowie Selbstbehauptung und Selbstverteidigung.",
     "button": {
       "text": "Mehr erfahreh",
-      "link": "/kinder"
+      "link": "/erwachsene"
     }
   },
   {
@@ -24,7 +24,7 @@
     "description": "Für Einsatz- und Rettungskräfte bieten wir speziell abgestimmte Seminare mit Fokus auf die Eigensicherung und einsatzbezogener Selbstverteidigung an. Zusätzlich wird der Umgang mit den Führungs- und Einsatzmittel sowie taktisches Vorgehen praxisnah geübt.",
     "button": {
       "text": "Mehr erfahreh",
-      "link": "/kinder"
+      "link": "/behorden"
     }
   },
   {
