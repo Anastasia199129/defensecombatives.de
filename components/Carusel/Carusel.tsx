@@ -9,9 +9,9 @@ import { log } from 'console'
 
 const items = [
   { id: 0, path: '/kinder', imageUrl: 'photo_2023-05-01_13-51-14.jpg' },
-  { id: 1, path: '/kinder', imageUrl: 'photo_2023-05-01_13-51-17.jpg' },
-  { id: 2, path: '/kinder', imageUrl: 'photo_2023-05-01_13-51-20.jpg' },
-  { id: 3, path: '/kinder', imageUrl: 'photo_2023-05-01_13-51-23.jpg' },
+  { id: 1, path: '/behorden', imageUrl: 'photo_2023-05-01_13-51-17.jpg' },
+  { id: 2, path: '/erwachsene', imageUrl: 'photo_2023-05-01_13-51-20.jpg' },
+  { id: 3, path: '/frauen', imageUrl: 'photo_2023-05-01_13-51-23.jpg' },
 ]
 
 export default function Carusel() {
@@ -36,7 +36,7 @@ export default function Carusel() {
       >
         {items.map((item) => (
           <Link 
-            href='/kinder' 
+            href={item.path} 
             // className={s.wrapperImg} 
             key={item.id}
           >
