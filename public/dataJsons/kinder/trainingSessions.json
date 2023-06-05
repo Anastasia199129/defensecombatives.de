@@ -2,7 +2,17 @@
   "title": "WIE SIND DIE TRAININGSEINHEITEN",
   "images": [
     {
-      "src": "/img/trainings_kids.jpg",
+      "src": "/img/trainings_kids-01.jpg",
+      "title": "trainings_kids",
+      "alt": "trainings_kids"
+    },
+    {
+      "src": "/img/trainings_kids-02.jpg",
+      "title": "trainings_kids",
+      "alt": "trainings_kids"
+    },
+    {
+      "src": "/img/trainings_kids-03.jpg",
       "title": "trainings_kids",
       "alt": "trainings_kids"
     }

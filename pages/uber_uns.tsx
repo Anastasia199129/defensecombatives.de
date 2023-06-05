@@ -3,35 +3,37 @@ import Footer from '@/components/Footer/Footer'
 import Hero from '@/components/Hero/Hero'
 import MedalsAndText from '@/components/MedalsAndText/MedalsAndText'
 import WirSind from '@/components/WirSind/WirSind'
-import QuotationMark from '@/components/QuotationMark/QuotationMark'
 import TrainingSessions from '@/components/TrainingSessions/TrainingSessions'
 import RegistrationAndTraining from '@/components/RegistrationAndTraining/RegistrationAndTraining'
 import ChacraForm from '@/components/Form/ChacraForm'
 
 import heroData from '../public/dataJsons/uber_uns/hero.json'
 import trainingSessionsData from '../public/dataJsons/uber_uns/trainingSessions.json'
-// import { log } from 'console'
+import trainingSessionsSecondData from '../public/dataJsons/erwachsene/trainingSessionGrey.json'
+import Invite from '@/components/Invite/Invite'
+
 
 export default function über_uns() {
-  const data = ['asdf', 'fdas', 'asds', 'd fm', 'dfaa', 'aaaa', 'aabb', 'aaabb']
 
-  const f = (d: string[]) => {
-    return d.filter((str: any) => {
-      const count = str
-        .split('')
-        .reduce((acc:any, el: string | number) => {
-          console.log(acc, {el});
+  // const data = ['asdf', 'fdas', 'asds', 'd fm', 'dfaa', 'aaaa', 'aabb', 'aaabb']
+
+  // const f = (d: string[]) => {
+  //   return d.filter((str: any) => {
+  //     const count = str
+  //       .split('')
+  //       .reduce((acc:any, el: string | number) => {
+  //         console.log(acc, {el});
           
-          acc[el] = (acc[el] || 0) + 1
-          return acc
-        }, {})
-      console.log(count)
+  //         acc[el] = (acc[el] || 0) + 1
+  //         return acc
+  //       }, {})
+  //     console.log(count)
 
-      return Object.values(count).includes(2)
-    })
-  }
+  //     return Object.values(count).includes(2)
+  //   })
+  // }
 
-  console.log(f(data))
+  // console.log(f(data))
 
 
   
@@ -81,8 +83,9 @@ export default function über_uns() {
       <Hero data={heroData} />
       <WirSind />
       <MedalsAndText />
-      <QuotationMark />
-      <TrainingSessions type='uber_uns' data={trainingSessionsData} />
+      <TrainingSessions data={trainingSessionsData} />
+      <TrainingSessions data={trainingSessionsSecondData} type='erwachseneWhite'/>
+      <Invite/>
       <RegistrationAndTraining type='uber_uns' />
       <ChacraForm />
       <Footer />

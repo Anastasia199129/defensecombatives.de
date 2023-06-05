@@ -29,6 +29,7 @@
   "socialMedia": [
     {
       "id": 3,
+      "link": "https://www.facebook.com/profile.php?id=100084612544968",
       "img": {
         "src": "/img/facebook.svg",
         "title": "facebook",
@@ -37,6 +38,7 @@
     },
     {
       "id": 4,
+      "link": "https://www.instagram.com/defensecombatives/",
       "img": {
         "src": "/img/instagramm.svg",
         "title": "instagramm",

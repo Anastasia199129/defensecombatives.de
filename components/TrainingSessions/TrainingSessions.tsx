@@ -18,11 +18,11 @@ interface Props {
 
 export default function TrainingSessions({ data, type }: Props) {
   return (
-    <section className={`${s.section} ${type === 'grey' ? s.baclgroundGrey : ''}`}>
+    <section className={`${s.section} ${type === 'erwachseneGrey' ? s.baclgroundGrey : ''}`}>
       <Container>
         <Title title={data.title} />
         {data.subtitle && <h3 className={s.subtitle}>{data.subtitle}</h3>}
-        <div className={`${type === 'uber_uns' ? s.uber_uns : s.flex}`}>
+        <div className={`${type === 'uber_uns' ? s.uber_uns : type === 'erwachsene' || type === 'erwachseneGrey' || type === 'erwachseneWhite' ? s.erwachsene : s.flex}`}>
           {data?.images.map(({ src, title, alt }, i) => (
             <div key={i} className={`${type === 'behorden' ? s.imgWrapperBehorden : s.imgWrapper}`}>
               <img src={src} alt={alt} title={title} />

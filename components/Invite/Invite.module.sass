@@ -1,0 +1,21 @@
+@import ../../styles/settings
+
+.wrapper
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  .link
+    position: relative
+    background-color: $orange
+    color: $white
+    padding: 10px 40px
+    text-transform: uppercase
+
+    &::after
+      position: absolute
+      content: url('./img/arrow.svg')
+      width: 13px
+      height: 13px
+      top: 11px
+      right: 12px

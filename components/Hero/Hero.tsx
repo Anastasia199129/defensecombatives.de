@@ -48,11 +48,11 @@ export default function Hero({ data, type }: Props) {
   }
 
   const items = [
-    { id: 0, path: '/kinder', imageUrl: 'angebot banners_-01.jpg' },
-    { id: 1, path: '/kinder', imageUrl: 'angebot banners_-02.jpg' },
-    { id: 2, path: '/kinder', imageUrl: 'angebot banners_-03.jpg' },
-    { id: 3, path: '/kinder', imageUrl: 'angebot banners_-04.jpg' },
-    { id: 3, path: '/kinder', imageUrl: 'angebot banners_-05.jpg' },
+    { id: 0, path: '/kinder', imageUrl: 'angebot banners.jpg' },
+    { id: 1, path: '/behorden', imageUrl: 'angebot banners2.jpg' },
+    { id: 2, path: '/frauen', imageUrl: 'angebot banners3.jpg' },
+    { id: 3, path: '/erwachsene', imageUrl: 'angebot banners4.jpg' },
+    { id: 3, path: '/kinder', imageUrl: 'angebot banners5.jpg' },
   ]
 
   return (
@@ -61,7 +61,7 @@ export default function Hero({ data, type }: Props) {
         <div className={s.wrapper}>
           <Slider ref={sliderRef} {...settings}>
             {items.map((item) => (
-              <Link href='/kinder' key={item.id}>
+              <Link href={item.path} key={item.id}>
                 <img src={item.imageUrl} alt={`Slide ${item.id}`} />
               </Link>
             ))}

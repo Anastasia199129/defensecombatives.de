@@ -32,6 +32,12 @@ export default function Footer() {
             </ul>
           </address>
 
+          {/* Сестричка), [04.06.2023 20:16]
+https://www.facebook.com/profile.php?id=100084612544968
+
+Сестричка), [04.06.2023 20:17]
+https://www.instagram.com/defensecombatives/ */}
+
           <div className={s.socialMedia}>
             <div
               className={s.title}
@@ -39,15 +45,16 @@ export default function Footer() {
                 __html: text,
               }}
             />
-            {socialMedia?.map(({ id, img }) => (
+            {socialMedia?.map(({ id, img, link }) => (
+            <Link key={id} href={link}>
               <Image
-                key={id}
                 width={40}
                 height={40}
                 src={img.src}
                 title={img.title}
                 alt={img.alt}
               />
+            </Link>
             ))}
           </div>
         </div>

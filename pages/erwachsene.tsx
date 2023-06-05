@@ -4,11 +4,12 @@ import Hero from '@/components/Hero/Hero'
 import WasBiten from '@/components/WasBiten/WasBiten'
 import KravMagaOffers from '@/components/KravMagaOffers/KravMagaOffers'
 import TrainingSessions from '@/components/TrainingSessions/TrainingSessions'
+import ChacraForm from '@/components/Form/ChacraForm'
 
 import heroData from '../public/dataJsons/erwachsene/hero.json'
 import wasBitenData from '../public/dataJsons/erwachsene/wasBiten.json'
-import trainingSessionsData from '../public/dataJsons/erwachsene/trainingSession.json'
-import ChacraForm from '@/components/Form/ChacraForm'
+import trainingSessionsGreyData from '../public/dataJsons/erwachsene/trainingSessionGrey.json'
+import trainingSessionsData from '../public/dataJsons/erwachsene/trainingSessions.json'
 
 export default function Impressum () {
   return <>
@@ -16,7 +17,8 @@ export default function Impressum () {
   <Hero data={heroData}/>
   <KravMagaOffers/>
   <WasBiten data={wasBitenData}/>
-  <TrainingSessions data={trainingSessionsData} type='grey'/>
+  <TrainingSessions data={trainingSessionsGreyData} type='erwachseneGrey'/>
+  <TrainingSessions data={trainingSessionsData} type='uber_uns'/>
   <ChacraForm/>
   <Footer/>
   </>

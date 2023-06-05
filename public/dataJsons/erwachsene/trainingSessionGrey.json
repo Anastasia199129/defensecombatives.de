@@ -1,0 +1,35 @@
+{
+  "title": "Unser trainingsraum und Ausrüstung",
+  "images": [
+    {
+      "src": "/img/traningsraum1.jpg",
+      "title": "traningsraum",
+      "alt": "traningsraum"
+    },
+    {
+      "src": "/img/traningsraum2.jpg",
+      "title": "traningsraum",
+      "alt": "traningsraum"
+    },
+    {
+      "src": "/img/traningsraum3.jpg",
+      "title": "traningsraum",
+      "alt": "traningsraum"
+    },
+    {
+      "src": "/img/traningsraum4.jpg",
+      "title": "traningsraum",
+      "alt": "traningsraum"
+    },
+    {
+      "src": "/img/traningsraum5.jpg",
+      "title": "traningsraum",
+      "alt": "traningsraum"
+    },
+    {
+      "src": "/img/traningsraum6.jpg",
+      "title": "traningsraum",
+      "alt": "traningsraum"
+    }
+  ]
+}

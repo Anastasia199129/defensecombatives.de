@@ -27,7 +27,7 @@ export default function Startseite() {
       <BanerKidsAngebot />
       <ForKidsSchool />
       <QuoresSection />
-      <TrainingSessions data={trainingSessionsData}/>
+      <TrainingSessions type='uber_uns' data={trainingSessionsData}/>
       <PopularQuestions data={popularQuestionsData} />
       <ChacraForm />
       <Footer />
