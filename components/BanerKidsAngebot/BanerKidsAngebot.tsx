@@ -5,7 +5,7 @@ export default function BanerKidsAngebot() {
   return (
     <div className={s.section}>
       <Container>
-        <h3>Unser sonderangebot für Kindergärten und schulen</h3>
+        <h3><span>Unser sonderangebot</span> für Kindergärten und schulen</h3>
       </Container>
     </div>
   )
