@@ -42,7 +42,7 @@ import Invite from '@/components/Invite/Invite'
 export default function Home() {
   return (
     <>
-<CustomHead/>
+      <CustomHead/>
       <Header />
       <main>
         <Hero data={{title: '', subtitle: '', text: ''}}/>

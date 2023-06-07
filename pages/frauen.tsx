@@ -7,6 +7,8 @@ import CourseOverview from '@/components/CourseOverview/CourseOverview'
 import WasBiten from '@/components/WasBiten/WasBiten'
 import TrainingSessions from '@/components/TrainingSessions/TrainingSessions'
 import PopularQuestions from '@/components/PopularQuestions/PopularQuestions'
+import ChacraForm from '@/components/Form/ChacraForm'
+import CustomHead from '@/components/CustomHead/CustomHead'
 
 import heroData from '../public/dataJsons/frauen/hero.json'
 import gradientAndCardsData from '../public/dataJsons/frauen/gradientAndCards.json'
@@ -14,20 +16,22 @@ import illustrationData from '../public/dataJsons/frauen/illustration.json'
 import wasBitenData from '../public/dataJsons/frauen/wasBiten.json'
 import trainingSessionsData from '../public/dataJsons/frauen/trainingSession.json'
 import popularQuestionsData from '../public/dataJsons/frauen/popularQuestions.json'
-import ChacraForm from '@/components/Form/ChacraForm'
 
 export default function behoerdenUndOeffentlicheTraeger() {
   return (
     <>
+      <CustomHead />
       <Header />
-      <Hero data={heroData} type='frauen' />
-      <GradientAndCards data={gradientAndCardsData} type='frauen' />
-      <Illustration img={illustrationData} />
-      <CourseOverview />
-      <WasBiten data={wasBitenData} type='frauen' />
-      <TrainingSessions data={trainingSessionsData} />
-      <PopularQuestions data={popularQuestionsData} type='frauen' />
-      <ChacraForm/>
+      <main>
+        <Hero data={heroData} type='frauen' />
+        <GradientAndCards data={gradientAndCardsData} type='frauen' />
+        <Illustration img={illustrationData} />
+        <CourseOverview />
+        <WasBiten data={wasBitenData} type='frauen' />
+        <TrainingSessions data={trainingSessionsData} />
+        <PopularQuestions data={popularQuestionsData} type='frauen' />
+        <ChacraForm />
+      </main>
       <Footer />
     </>
   )
