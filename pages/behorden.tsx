@@ -15,6 +15,7 @@ import trainingSessionInstructorData from '../public/dataJsons/behorden/training
 import trainingSessionTrainingData from '../public/dataJsons/behorden/trainingSessionTraining.json'
 
 export default function UeberUns() {
+
   return (
     <>
       <CustomHead />
