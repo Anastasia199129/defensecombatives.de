@@ -12,6 +12,7 @@ import trainingSessionsData from '../public/dataJsons/uber_uns/trainingSessions.
 import trainingSessionsSecondData from '../public/dataJsons/erwachsene/trainingSessionGrey.json'
 import Invite from '@/components/Invite/Invite'
 import CustomHead from '@/components/CustomHead/CustomHead'
+import { log } from 'console'
 
 export default function über_uns() {
   // const data = ['asdf', 'fdas', 'asds', 'd fm', 'dfaa', 'aaaa', 'aabb', 'aaabb']
@@ -74,7 +75,23 @@ export default function über_uns() {
 
   // </script>
 
+  const x = (yy:number) => {
+    return () => {
+      const d = 5
+      return d + yy
+    }
+  }
+
+  const f = x(7)
+  const h = x(20)
+  const g = x(30)
+
+  console.log(f(), h(), g())
+
+
   return (
+
+
     <>
       <CustomHead />
       <Header />
