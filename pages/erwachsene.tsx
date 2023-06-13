@@ -25,9 +25,9 @@ export default function Impressum() {
           data={trainingSessionsGreyData}
           type='erwachseneGrey'
         />
-        <a id='#myAnchor'/>
         <TrainingSessions data={trainingSessionsData} type='uber_uns' />
         <ChacraForm />
+        <a id="my-anchor"></a>
       </main>
       <Footer />
     </>
