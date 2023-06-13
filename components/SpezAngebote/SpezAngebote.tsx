@@ -14,7 +14,7 @@ export default function SpezAngebote() {
         <Title title='unsere speziellen angebote'/>
         <ul className={s.ul}>
           {data &&
-            data.map(({ id, title, description, img, button }) => (
+            data.map(({ id, idLink= '', title, description, img, button }) => (
               <li key={id}>
                 <div>
                 <div className={s.imgWrapper}>
@@ -24,6 +24,7 @@ export default function SpezAngebote() {
                 <p>{description}</p>
                 </div>
                 <Link 
+                  id={idLink}
                   className={s.link} 
                   href={button.link}>
                     {button.text}
