@@ -4,11 +4,19 @@
   font-family: $r
   margin-bottom: 100px
   display: grid
-  grid-template-columns: 1fr 1fr 1fr
-  grid-template-rows: 1fr 1fr
   min-height: 400px
-  column-gap: 20px
-  row-gap: 20px
+  +r(0, 575)
+    grid-template-columns: 1fr
+    gap: 20px
+  +r(576)
+    grid-template-columns: 31.4% 31.4% 31.4%
+    grid-template-rows: 1fr 1fr
+  +r(576, 991)
+    column-gap: 3%
+    row-gap: 3%
+  +r(992)
+    column-gap: 20px
+    row-gap: 20px 
 
   li
     display: flex
@@ -17,7 +25,16 @@
     align-items: center
     text-align: center
     gap: 26px
-    padding: 20px
+    +r(0, 575)
+      padding: 20px
+    +r(0, 767) 
+      font-size: 14px
+    +r(768, 991)
+      font-size: 16px 
+    +r(575, 991)  
+      padding: 15px
+    +r(992)  
+      padding: 20px
 
     &:nth-child(odd)
       color: $black
@@ -28,5 +45,8 @@
       background-color: $blue
 
     img
-      height: 120px
-      // width: 100%
+      +r(575, 991)  
+        height: 120px
+        min-width: 140px
+      +r(992)  
+        height: 120px

@@ -15,9 +15,14 @@
     max-width: 1499px
 
   .wrapperContent
-    font-size: 20px
     font-weight: 500
     display: inline-block
     padding: 80px 40px
     background-color: #2b22929c
     color: $white
+    +r(0, 575)
+      font-size: 16px
+    +r(576, 991)
+      font-size: 18px
+    +r(992)
+      font-size: 20px

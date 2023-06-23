@@ -15,6 +15,10 @@
     align-items: center
     justify-content: space-between
 
+    +r(0, 575)
+      flex-wrap: wrap
+      gap: 15px
+
     .address
       font-style: normal
 
@@ -26,9 +30,32 @@
 
         &:not(:last-child)
           margin-bottom: 10px
-          
 
-    .socialMedia
-      display: flex
-      align-items: center
-      gap: 15px
+    .rightSideContainer
+
+      .socialMedia
+        display: flex
+
+        +r(0, 575)
+          flex-direction: row-reverse
+          align-items: center
+          gap: 15px
+          
+        +r(576, 991)
+          flex-direction: column-reverse
+          align-items: baseline
+          gap: 15px
+
+        +r(992)
+          align-items: center
+          gap: 15px
+
+      .socialIcons
+        display: flex
+        gap: 15px
+
+      .impressum
+        margin-top: 10px
+
+      .active
+        color: #DAA520

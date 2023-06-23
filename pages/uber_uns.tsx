@@ -75,18 +75,18 @@ export default function über_uns() {
 
   // </script>
 
-  const x = (yy:number) => {
-    return () => {
-      const d = 5
-      return d + yy
-    }
-  }
+  // const x = (yy:number) => {
+  //   return () => {
+  //     const d = 5
+  //     return d + yy
+  //   }
+  // }
 
-  const f = x(7)
-  const h = x(20)
-  const g = x(30)
+  // const f = x(7)
+  // const h = x(20)
+  // const g = x(30)
 
-  console.log(f(), h(), g())
+  // console.log(f(), h(), g())
 
 
   return (

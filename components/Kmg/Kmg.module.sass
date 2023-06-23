@@ -2,12 +2,13 @@
   
 .wrapper
   font-family: $r
-  background-image: url('./img/background.jpg')
   background-size:  1800px
   background-repeat: no-repeat
   background-position: center -646px
   +r(0, 575)
     padding-bottom: 64px
+  +r(576)  
+    background-image: url('./img/background.jpg')
   +r(576, 991)
     padding-bottom: 96px
   +r(992)
@@ -15,8 +16,12 @@
 
   .flex
     display: flex
-    align-items: flex-end
-    gap: 60px
+    +r(0, 575)
+      gap: 20px
+      align-items: center
+    +r(576)
+      gap: 60px
+      align-items: flex-end
 
     .logoWrapper
 

@@ -5,14 +5,24 @@
   display: flex
   align-items: center
   justify-content: center
-  gap: 50px
+
+  +r(0, 575)
+    flex-direction: column
+    gap: 30px
+  +r(576)  
+    gap: 50px
 
   .imgWrapper
-    width: 388px
-    gap: 50px
+    +r(0, 575)
+      width: 70%
+    +r(576)  
+      width: 388px
+      gap: 50px
 
     img
       width: 100%
+
+
 
   .title
     margin-bottom: 20px

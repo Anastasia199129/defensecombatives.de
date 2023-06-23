@@ -27,6 +27,7 @@ export default function Startseite() {
         <Hero data={heroData} type='kinder' />
         <GradientAndCards data={gradientAndCardsData} />
         <WasBiten data={wasBitemData} />
+        <a id='unser'/>
         <BanerKidsAngebot />
         <ForKidsSchool />
         <QuoresSection />

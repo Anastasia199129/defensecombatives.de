@@ -1,0 +1,7 @@
+[
+  { "id": 0, "path": "/kinder#unser", "imageUrl": {"url": "/img/banners/angebot banners.jpg", "mobileUrl": "/img/banners/angebotes_mobile-01.jpg"} },
+  { "id": 1, "path": "/behorden", "imageUrl": {"url": "/img/banners/angebot banners2.jpg", "mobileUrl": "/img/banners/angebotes_mobile-02.jpg"} },
+  { "id": 2, "path": "/frauen", "imageUrl": {"url": "/img/banners/angebot banners3.jpg", "mobileUrl": "/img/banners/angebotes_mobile-03.jpg"} },
+  { "id": 3, "path": "/erwachsene", "imageUrl": {"url": "/img/banners/angebot banners4.jpg", "mobileUrl": "/img/banners/angebotes_mobile-04.jpg"} },
+  { "id": 3, "path": "/kinder#unser", "imageUrl": {"url": "/img/banners/angebot banners5.jpg", "mobileUrl": "/img/banners/angebotes_mobile-05.jpg"} }
+]

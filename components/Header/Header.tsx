@@ -1,10 +1,14 @@
 import Link from 'next/link'
-import data from './header.json'
-import s from './Header.module.sass'
+
 import { useRouter } from 'next/router'
-import { log } from 'console'
+import { useState } from 'react'
+import useWindowWidth from '../../helpers/windiwWidthHandler'
+
 import Container from '../Container/Container'
-import {useSelector} from 'react-redux'
+
+import data from './header.json'
+
+import s from './Header.module.sass'
 
 interface Data {
   id: string
@@ -13,10 +17,11 @@ interface Data {
 }
 
 export default function Header() {
-  const state = useSelector(state => state)
-// console.log(state.user);
-
   const router = useRouter()
+  const [active, setActive] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
+
+  const windowWidth = useWindowWidth()
 
   const getActiveLink = (link: string) => {
     if (link === router.pathname) {
@@ -24,20 +29,42 @@ export default function Header() {
     } else return {}
   }
 
+  const onToggleMenuClick = () => {
+    setActive(!active)
+    setShowMenu(!showMenu)
+  }
+
   return (
     <Container>
-      <div className={s.wrapper}>
-        {data &&
-          data.map(({ id, name, link }: Data) => (
-            <p 
-              style={getActiveLink(link)} 
-              key={id}
-            >
-              <Link href={`${link}`}>{name}</Link>
-            </p>
-          ))}
-      </div>
-
+      {windowWidth >= 768 ? (
+        <div className={s.wrapper}>
+          <Link href='/' className={s.logo} />
+          {data &&
+            data.map(({ id, name, link }: Data) => (
+              <p style={getActiveLink(link)} key={id}>
+                <Link href={`${link}`}>{name}</Link>
+              </p>
+            ))}
+        </div>
+      ) : (
+        <div className={`${s.wrapper} ${s.burgerWrapper}`}>
+          <Link href='/' className={s.logo} />
+          <button
+            onClick={onToggleMenuClick}
+            className={`${s.burger} ${active ? s.active : ''}`}
+          ></button>
+          {showMenu && (
+            <div className={s.menu}>
+              {data &&
+                data.map(({ id, name, link }: Data) => (
+                  <p style={getActiveLink(link)} key={id}>
+                    <Link href={`${link}`}>{name}</Link>
+                  </p>
+                ))}
+            </div>
+          )}
+        </div>
+      )}
     </Container>
   )
 }

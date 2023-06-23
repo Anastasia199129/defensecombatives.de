@@ -2,30 +2,34 @@
 
 .wrapper
   font-family: $r
-  background-image: url('./img/background.jpg')
-  background-size:  1800px
+  background-size: 1800px
   background-repeat: no-repeat
   background-position: center -926px
   +r(0, 575)
     margin-bottom: 64px
+  +r(576)  
+    background-image: url('./img/background.jpg')
   +r(576, 991)
     margin-bottom: 96px
   +r(992)
-    margin-bottom: 144px  
+    margin-bottom: 144px
 
   h4
-    font-size: 20px
     font-weight: 500
     color: $blue
+    +r(0, 575)
+      font-size: 18px
+    +r(576)
+      font-size: 20px
 
     +r(0, 575)
       margin-bottom: 20px
     +r(576, 991)
       margin-bottom: 30px
     +r(992)
-      margin-bottom: 40px 
+      margin-bottom: 40px
 
-.section  
+.section
   +r(0, 575)
     margin-top: 64px
     margin-bottom: 64px
@@ -34,7 +38,7 @@
     margin-bottom: 96px
   +r(992)
     margin-top: 144px
-    margin-bottom: 144px  
+    margin-bottom: 144px
 
   h4
     font-size: 20px
@@ -46,8 +50,8 @@
     +r(576, 991)
       margin-bottom: 30px
     +r(992)
-      margin-bottom: 40px       
-  
+      margin-bottom: 40px
+
 .formContainer
   background-color: #000080
   display: flex
@@ -64,22 +68,28 @@
     div
       &:last-child
         grid-column-start: 1
-        grid-column-end: 3    
+        grid-column-end: 3
 
     label, span
       color: #fff
-      font-size: 18px
 
-    input, textarea 
-      background-color: #fff  
+      +r(0, 991)
+        font-size: 16px
+
+      +r(992)
+        font-size: 18px
+
+    input, textarea
+      background-color: #fff
 
   .button
-    font-size: 18px
     background-color: $white
     color: $blue
+    +r(0, 991)
+      font-style: 16px
+    +r(992) 
+      font-size: 18px
 
     &:hover, &:focus
       color: $white
       background-color: $orange
-      // background-color: $greyLight
-

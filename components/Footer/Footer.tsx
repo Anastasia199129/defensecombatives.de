@@ -1,27 +1,34 @@
 import Link from 'next/link'
+import Image from 'next/image'
+
+import { useRouter } from 'next/router'
+
 import Container from '../Container/Container'
-import s from './Footer.module.sass'
 
 import data from './footer.json'
-import Image from 'next/image'
+import useWindowWidth from '../../helpers/windiwWidthHandler'
+
+import s from './Footer.module.sass'
 
 export default function Footer() {
   const { contacts, socialMedia, text } = data
 
+  const router = useRouter()
+  const windowWidth = useWindowWidth()
+
   return (
     <div className={s.section}>
       <Container>
-        <p className={s.contactTitle}>Kontacte</p>
+        <p className={s.contactTitle}>Kontakt</p>
 
         <div className={s.wrapper}>
-
           <address className={s.address}>
             <ul className={s.list}>
               {contacts?.map(({ id, link, img }) => (
                 <li key={id}>
                   <Image
-                    width={40}
-                    height={40}
+                    width={windowWidth > 575 ? 40 : 30}
+                    height={windowWidth > 575 ? 40 : 30}
                     src={img.src}
                     title={img.title}
                     alt={img.alt}
@@ -32,30 +39,34 @@ export default function Footer() {
             </ul>
           </address>
 
-          {/* Сестричка), [04.06.2023 20:16]
-https://www.facebook.com/profile.php?id=100084612544968
-
-Сестричка), [04.06.2023 20:17]
-https://www.instagram.com/defensecombatives/ */}
-
-          <div className={s.socialMedia}>
-            <div
-              className={s.title}
-              dangerouslySetInnerHTML={{
-                __html: text,
-              }}
-            />
-            {socialMedia?.map(({ id, img, link }) => (
-            <Link key={id} href={link}>
-              <Image
-                width={40}
-                height={40}
-                src={img.src}
-                title={img.title}
-                alt={img.alt}
+          <div className={s.rightSideContainer}>
+            <div className={s.socialMedia}>
+              <div
+                className={s.title}
+                dangerouslySetInnerHTML={{
+                  __html: text,
+                }}
               />
-            </Link>
-            ))}
+              <div className={s.socialIcons}>
+              {socialMedia?.map(({ id, img, link }) => (
+                <Link key={id} href={link}>
+                  <Image
+                    width={windowWidth > 575 ? 40 : 30}
+                    height={windowWidth > 575 ? 40 : 30}
+                    src={img.src}
+                    title={img.title}
+                    alt={img.alt}
+                  />
+                </Link>
+              ))}
+              </div>
+            </div>
+
+            <div
+              className={`${s.impressum} ${router.pathname === '/impressum' ? s.active : ''}`}
+            >
+              <Link href='/impressum'>Impressum</Link>
+            </div>
           </div>
         </div>
       </Container>

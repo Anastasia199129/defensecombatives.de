@@ -10,7 +10,7 @@
     "description": "Wir bieten Seminare speziell für Behörden und bürgernahe Dienstleister an. Inhalte der Seminare sind Kommunikation, Körpersprache, persönliches Auftreten, Deeskalation sowie Selbstbehauptung und Selbstverteidigung.",
     "button": {
       "text": "Mehr erfahreh",
-      "link": "/erwachsene#my-anchor"
+      "link": "/behorden"
     }
   },
   {
@@ -38,7 +38,7 @@
     "description": "Für Kindergärten bieten wir insbesondere ab dem Vorschulalter Kurse für Selbstbehauptung, kognitive Förderung sowie altersgerechte Selbstverteidigung an. Weiterhin bieten wir in Schulen auch Deeskalationstraining an.",
     "button": {
       "text": "Mehr erfahreh",
-      "link": "/kinder"
+      "link": "/kinder#unser"
     }
   }
 ]

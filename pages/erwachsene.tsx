@@ -27,7 +27,6 @@ export default function Impressum() {
         />
         <TrainingSessions data={trainingSessionsData} type='uber_uns' />
         <ChacraForm />
-        <a id="my-anchor"></a>
       </main>
       <Footer />
     </>

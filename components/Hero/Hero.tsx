@@ -1,13 +1,14 @@
-// import DemoCarousel  from '../New'
 import Link from 'next/link'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import s from './Hero.module.sass'
 import { useRef } from 'react'
+import useWindowWidth from '../../helpers/windiwWidthHandler'
 
 import Slider from 'react-slick'
-import Carusel from '../Carusel/Carusel'
 import Container from '../Container/Container'
+
+import items from './mainJson.json'
 
 interface Props {
   data: {
@@ -22,17 +23,7 @@ interface Props {
 export default function Hero({ data, type }: Props) {
   const sliderRef = useRef<Slider>(null)
 
-  // const handlePrevArrowClick = () => {
-  //   if (sliderRef.current) {
-  //     sliderRef.current.slickPrev(); // Пролистывание слайдера назад
-  //   }
-  // };
-
-  // const handleNextArrowClick = () => {
-  //   if (sliderRef.current) {
-  //     sliderRef.current.slickNext(); // Пролистывание слайдера вперед
-  //   }
-  // };
+  const windowWidth = useWindowWidth()
 
   const settings = {
     dots: true,
@@ -41,19 +32,7 @@ export default function Hero({ data, type }: Props) {
     slidesToScroll: 1,
     autoplay: true,
     speed: 500,
-    // customPadding:  (i:any) => <button>{i + 1}</button>,
-    // nextArrow: <button className={s.nextArrow} onClick={handleNextArrowClick}><img src='/img/facebook.svg'/></button>,
-    // prevArrow: <button onClick={handlePrevArrowClick}><img src='/img/facebook.svg'/></button>
-    // arrow: true
   }
-
-  const items = [
-    { id: 0, path: '/kinder', imageUrl: 'angebot banners.jpg' },
-    { id: 1, path: '/behorden', imageUrl: 'angebot banners2.jpg' },
-    { id: 2, path: '/frauen', imageUrl: 'angebot banners3.jpg' },
-    { id: 3, path: '/erwachsene', imageUrl: 'angebot banners4.jpg' },
-    { id: 3, path: '/kinder', imageUrl: 'angebot banners5.jpg' },
-  ]
 
   return (
     <>
@@ -62,7 +41,7 @@ export default function Hero({ data, type }: Props) {
           <Slider ref={sliderRef} {...settings}>
             {items.map((item) => (
               <Link href={item.path} key={item.id}>
-                <img src={item.imageUrl} alt={`Slide ${item.id}`} />
+                <img src={windowWidth > 575 ? item.imageUrl.url : item.imageUrl.mobileUrl} alt={`Slide ${item.id}`} />
               </Link>
             ))}
           </Slider>
