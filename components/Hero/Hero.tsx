@@ -15,7 +15,11 @@ interface Props {
     title?: string
     subtitle?: string
     text?: string
-    backgroundImmage?: string
+    backgroundImmage?: { 
+      img: string 
+      imgTablet: string 
+      imgMobile: string 
+    }
   }
   type?: string | undefined
 }
@@ -41,7 +45,14 @@ export default function Hero({ data, type }: Props) {
           <Slider ref={sliderRef} {...settings}>
             {items.map((item) => (
               <Link href={item.path} key={item.id}>
-                <img src={windowWidth > 575 ? item.imageUrl.url : item.imageUrl.mobileUrl} alt={`Slide ${item.id}`} />
+                <img
+                  src={
+                    windowWidth > 575
+                      ? item.imageUrl.url
+                      : item.imageUrl.mobileUrl
+                  }
+                  alt={`Slide ${item.id}`}
+                />
               </Link>
             ))}
           </Slider>
@@ -49,10 +60,18 @@ export default function Hero({ data, type }: Props) {
       ) : (
         <div
           className={`${s.baner} ${
-            type === 'kinder' ? s.kinder : type === 'frauen' ? s.frauen : type ===  'behorden' ? s.behorden : ''
+            type === 'kinder'
+              ? s.kinder
+              : type === 'frauen'
+              ? s.frauen
+              : type === 'behorden'
+              ? s.behorden
+              : ''
           }`}
-          style={{ backgroundImage: `url(${data.backgroundImmage})` }}
+          style={{ backgroundImage: `url(${windowWidth < 992 && data.backgroundImmage?.img})` }}
         >
+
+        {windowWidth < 992 &&  <img src={data.backgroundImmage?.imgTablet} alt="" />}
           <Container>
             <div className={s.heroContent}>
               <h1>{data?.title}</h1>

@@ -20,33 +20,47 @@
               
         .card
           display: grid
-          justify-content: space-between
-          grid-template-columns: 40% 60%
           grid-gap: 20px
 
+          +r(0, 575)
+            grid-template-columns: 1fr
+
+          +r(576) 
+            justify-content: space-between
+            grid-template-columns: 40% 60% 
+
           .imgWrapper
-            justify-content: flex-start  
+            +r(576) 
+              justify-content: flex-start  
 
       &:nth-child(odd) 
 
         .card
           display: grid
-          justify-content: space-between
-          grid-template-columns: 60% 40% 
+
           grid-gap: 20px
 
-          .imgWrapper
-            justify-content: flex-end
+          +r(0, 575)
+            grid-template-columns: 1fr
 
-            &:first-child
-              grid-row: 1
-              grid-column: 2
+          +r(576) 
+            justify-content: space-between
+            grid-template-columns: 60% 40% 
+
+          .imgWrapper
+            +r(576)
+              justify-content: flex-end
+
+              &:first-child
+                grid-row: 1
+                grid-column: 2
 
           .contentWrapper
 
             &:last-child
-              grid-row: 1
-              grid-column: 1 
+              +r(576)
+                grid-row: 1
+                grid-column: 1 
 
     h3
       text-transform: uppercase
@@ -54,11 +68,18 @@
       max-width: 565px          
 
     .imgWrapper
-      display: flex
-      align-items: center
+      +r(0, 575)
+        max-width: 335px
+        margin: 0 auto
+      +r(576)  
+        display: flex
+        align-items: cente
       
       img
-        min-width: 320px
+        +r(576, 991)
+          min-width: 260px
+        +r(992)
+          min-width: 320px
 
     .price 
       margin-top: 30px
