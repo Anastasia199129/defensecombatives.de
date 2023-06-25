@@ -92,7 +92,7 @@ export default function Hero({ data, type }: Props) {
                   }}
                 />
               )}
-              {type === 'kinder' && windowWidth < 768 && windowWidth > 420 && (
+              {type === 'kinder' && windowWidth < 768 && windowWidth > 430 && (
                 <div className={s.text}>
                   <p>{data.textWithoutBr}</p>
                 </div>
