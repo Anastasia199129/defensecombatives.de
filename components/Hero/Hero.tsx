@@ -68,10 +68,9 @@ export default function Hero({ data, type }: Props) {
               ? s.behorden
               : ''
           }`}
-          style={{ backgroundImage: `url(${windowWidth < 992 && data.backgroundImmage?.img})` }}
+          style={{ backgroundImage: `url(${windowWidth < 576 ? data.backgroundImmage?.imgMobile : data.backgroundImmage?.img})` }}
         >
-
-        {windowWidth < 992 &&  <img src={data.backgroundImmage?.imgTablet} alt="" />}
+        
           <Container>
             <div className={s.heroContent}>
               <h1>{data?.title}</h1>

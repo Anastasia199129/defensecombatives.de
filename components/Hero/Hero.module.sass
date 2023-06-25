@@ -18,22 +18,46 @@
   max-width: 1600px
   width: 100%
   margin: 0 auto
-  background-size: cover
   background-repeat: no-repeat
   background-position: center
+  +r(576, 767)
+    background-size: 750px 340px
+  +r(768, 999)
+    background-size: 1000px
+  +r(1000, 1991)
+    background-size: 1200px 
+  +r(1200)
+    background-size: cover
 
   .heroContent
-    height: 600px
     display: flex
     flex-direction: column
     justify-content: center
+    +r(576, 767)
+      height: 340px
+    +r(768, 999)
+      height: 400px
+    +r(1000, 1991)
+      height: 450px
+    +r(1200)
+      height: 600px
 
   h1
     margin-bottom: 10px
-    max-width: 545px   
+    max-width: 545px
+
+  h2
+    +r(576, 768)
+      max-width: 200px     
 
   .text
     font-size: 20px
+
+    p
+      +r(576, 767)
+        max-width: 300px
+      +r(768, 991)
+        max-width: 371px  
 
 .kinder
   position: relative
