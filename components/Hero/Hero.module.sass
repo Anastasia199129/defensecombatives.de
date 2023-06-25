@@ -21,32 +21,43 @@
   background-repeat: no-repeat
   background-position: center
   +r(576, 767)
-    background-size: 750px 340px
-  +r(768, 999)
-    background-size: 1000px
-  +r(1000, 1991)
-    background-size: 1200px 
-  +r(1200)
+    background-size: 750px 350px
+  // +r(768, 999)
+  //   background-size: 1000px
+  // +r(1000, 1991)
+  //   background-size: 1200px 
+  +r(0, 575)
+    background-size: cover
+  +r(768)
     background-size: cover
 
   .heroContent
     display: flex
     flex-direction: column
-    justify-content: center
+    +r(0, 575)
+      height: 618px
+      justify-content: flex-end
+      padding-bottom: 20px
+    +r(576) 
+      justify-content: center 
     +r(576, 767)
-      height: 340px
+      height: 350px
     +r(768, 999)
-      height: 400px
-    +r(1000, 1991)
       height: 450px
+    +r(1000, 1199)
+      height: 500px
     +r(1200)
       height: 600px
 
   h1
     margin-bottom: 10px
     max-width: 545px
+    +r(0, 575)
+      text-align: center
 
   h2
+    +r(0, 575)
+      text-align: center
     +r(576, 768)
       max-width: 200px     
 
@@ -54,10 +65,16 @@
     font-size: 20px
 
     p
+      +r(0, 575)
+        text-align: center
       +r(576, 767)
-        max-width: 300px
-      +r(768, 991)
-        max-width: 371px  
+        max-width: 308px
+      +r(768, 999)
+        max-width: 425px
+      +r(1000, 1199)
+        max-width: 420px 
+      +r(1200)
+        max-width: 540px
 
 .kinder
   position: relative

@@ -1,6 +1,7 @@
 {
-  "backgroundImmage": {"img": "/img/kinder.jpg", "imgTablet": "/img/kids_tablet_hero.jpg", "imgMobile": "/img/kids_mobile_hero.jpg"},
+  "backgroundImmage": {"img": "/img/kinder.jpg", "imgTablet": "/img/kids_hero_tablet.jpg", "imgMobile": "/img/kids_mobile_hero.jpg"},
   "title": "Training",
   "subtitle": "für Kinder und Jugendliche",
-  "text": "<p>Unsere Kurse tragen dazu bei, dass Kinder und<br/> Jugendliche zu selbstbewussten und starken<br/> Persönlichkeiten heranwachsen.</p>"
+  "text": "<p>Unsere Kurse tragen dazu bei, dass Kinder und<br/> Jugendliche zu selbstbewussten und starken<br/> Persönlichkeiten heranwachsen.</p>",
+  "textWithoutBr": "Unsere Kurse tragen dazu bei, dass Kinder und Jugendliche zu selbstbewussten und starken Persönlichkeiten heranwachsen"
 }

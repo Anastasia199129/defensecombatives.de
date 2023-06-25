@@ -15,10 +15,11 @@ interface Props {
     title?: string
     subtitle?: string
     text?: string
-    backgroundImmage?: { 
-      img: string 
-      imgTablet: string 
-      imgMobile: string 
+    textWithoutBr?: string
+    backgroundImmage?: {
+      img: string
+      imgTablet: string
+      imgMobile: string
     }
   }
   type?: string | undefined
@@ -68,14 +69,35 @@ export default function Hero({ data, type }: Props) {
               ? s.behorden
               : ''
           }`}
-          style={{ backgroundImage: `url(${windowWidth < 576 ? data.backgroundImmage?.imgMobile : data.backgroundImmage?.img})` }}
+          style={{
+            backgroundImage: `url(${
+              windowWidth < 576
+                ? data.backgroundImmage?.imgMobile
+                : windowWidth < 992 && windowWidth > 575
+                ? data.backgroundImmage?.imgTablet
+                : data.backgroundImmage?.img
+            })`,
+          }}
         >
-        
           <Container>
             <div className={s.heroContent}>
               <h1>{data?.title}</h1>
               <h2>{data.subtitle}</h2>
-              {data.text && (
+
+              {type === 'kinder' && data.text && windowWidth > 767 && (
+                <div
+                  className={s.text}
+                  dangerouslySetInnerHTML={{
+                    __html: data.text,
+                  }}
+                />
+              )}
+              {type === 'kinder' && windowWidth < 768 && windowWidth > 420 && (
+                <div className={s.text}>
+                  <p>{data.textWithoutBr}</p>
+                </div>
+              )}
+              {data.text && type !== 'kinder' && (
                 <div
                   className={s.text}
                   dangerouslySetInnerHTML={{
