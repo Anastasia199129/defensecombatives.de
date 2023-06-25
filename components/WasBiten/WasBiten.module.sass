@@ -20,17 +20,19 @@
               
         .card
           display: grid
-          grid-gap: 20px
+          grid-gap: 4%
 
-          +r(0, 575)
+          +r(0, 799)
             grid-template-columns: 1fr
-
-          +r(576) 
+          +r(992) 
             justify-content: space-between
-            grid-template-columns: 40% 60% 
+            grid-template-columns: 32% 64% 
+          +r(800, 991) 
+            justify-content: space-between
+            grid-template-columns: 42% 54% 
 
           .imgWrapper
-            +r(576) 
+            +r(800) 
               justify-content: flex-start  
 
       &:nth-child(odd) 
@@ -40,15 +42,20 @@
 
           grid-gap: 20px
 
-          +r(0, 575)
+          +r(0, 799)
             grid-template-columns: 1fr
 
-          +r(576) 
+          +r(800) 
             justify-content: space-between
-            grid-template-columns: 60% 40% 
+          +r(992) 
+            justify-content: space-between
+            grid-template-columns: 64% 32% 
+          +r(800, 991) 
+            justify-content: space-between
+            grid-template-columns: 54% 42% 
 
           .imgWrapper
-            +r(576)
+            +r(800)
               justify-content: flex-end
 
               &:first-child
@@ -58,7 +65,7 @@
           .contentWrapper
 
             &:last-child
-              +r(576)
+              +r(800)
                 grid-row: 1
                 grid-column: 1 
 
@@ -68,12 +75,15 @@
       max-width: 565px          
 
     .imgWrapper
-      +r(0, 575)
+      +r(0, 799)
         max-width: 335px
         margin: 0 auto
-      +r(576)  
+      +r(800)  
         display: flex
         align-items: cente
+      +r(800, 991)
+        width: 335px
+
       
       img
         +r(576, 991)
