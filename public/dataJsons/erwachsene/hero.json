@@ -1,5 +1,5 @@
 {
-  "backgroundImmage": "/img/erwachsene.jpg",
+  "backgroundImmage": {"img": "/img/erwachsene.jpg", "imgTablet": "/img/erwachsene_tablet_hero.jpg", "imgMobile": "/img/erwachsene_mobile_hero.jpg"},
   "title": "Krav Maga",
   "subtitle": "für Erwachsene"
 }

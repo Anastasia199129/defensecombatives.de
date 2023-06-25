@@ -1,5 +1,5 @@
 {
-  "backgroundImmage": "/img/frauen.jpg",
+  "backgroundImmage": {"img": "/img/frauen.jpg", "imgTablet": "/img/frauen_tablet_hero.jpg", "imgMobile": "/img/frauen_mobile_hero.jpg"},
   "title": "Selbstverteidigung und Selbstbehauptung",
   "subtitle": "NUR für Frauen"
 }
