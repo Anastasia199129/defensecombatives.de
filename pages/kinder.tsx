@@ -17,6 +17,7 @@ import gradientAndCardsData from '../public/dataJsons/kinder/gradientAndCards.js
 import wasBitemData from '../public/dataJsons/kinder/wasBiten.json'
 import trainingSessionsData from '../public/dataJsons/kinder/trainingSessions.json'
 import popularQuestionsData from '../public/dataJsons/kinder/popularQuestions.json'
+import banerKidsAngebotData from '../public/dataJsons/kinder/banerKidsAngebot.json'
 
 export default function Startseite() {
   return (
@@ -28,7 +29,7 @@ export default function Startseite() {
         <GradientAndCards data={gradientAndCardsData} />
         <WasBiten data={wasBitemData} />
         <a id='unser'/>
-        <BanerKidsAngebot />
+        <BanerKidsAngebot data={banerKidsAngebotData} />
         <ForKidsSchool />
         <QuoresSection />
         <TrainingSessions type='uber_uns' data={trainingSessionsData} />
