@@ -9,6 +9,7 @@ import Slider from 'react-slick'
 import Container from '../Container/Container'
 
 import items from './mainJson.json'
+import Image from 'next/image'
 
 interface Props {
   data: {
@@ -46,6 +47,18 @@ export default function Hero({ data, type }: Props) {
           <Slider ref={sliderRef} {...settings}>
             {items.map((item) => (
               <Link href={item.path} key={item.id}>
+                <Image
+                  src={
+                    windowWidth > 575
+                      ? item.imageUrl.url
+                      : item.imageUrl.mobileUrl
+                  }
+                  alt={`Slide ${item.id}`}
+                  layout='responsive'
+                  width={1000}
+                  height={400}
+                />
+                {/* 
                 <img
                   src={
                     windowWidth > 575
@@ -53,7 +66,7 @@ export default function Hero({ data, type }: Props) {
                       : item.imageUrl.mobileUrl
                   }
                   alt={`Slide ${item.id}`}
-                />
+                /> */}
               </Link>
             ))}
           </Slider>
@@ -112,5 +125,3 @@ export default function Hero({ data, type }: Props) {
     </>
   )
 }
-
-// {/* <Carusel /> */}
