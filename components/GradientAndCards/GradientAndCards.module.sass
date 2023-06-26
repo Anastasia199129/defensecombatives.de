@@ -14,21 +14,16 @@
 
   ul
     display: grid
-    
     +r(0, 575)
       grid-template-columns: 1fr
       grid-row-gap: 20px
-
     +r(576, 991)  
-      grid-template-columns: 1fr 1fr 1fr
-      grid-template-rows: 1fr 1fr
+      grid-template-columns: 31% 31% 31%
+      column-gap: 3.4%
       grid-row-gap: 20px
-      grid-column-gap: 20px
-
     +r(992) 
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 
       grid-column-gap: 20px
-
 
     li
       background-color: $white

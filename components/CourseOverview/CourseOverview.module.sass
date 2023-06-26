@@ -9,10 +9,18 @@
 
   ul
     display: grid
-    grid-template-columns: 1fr 1fr 1fr 1fr
-    grid-template-rows: 1fr 1fr
-    column-gap: 20px
     row-gap: 50px
+    +r(0, 575)
+      grid-template-columns: 1fr
+      column-gap: 20px
+    +r(576, 991)
+      grid-template-columns: 31% 31% 31%
+      grid-template-rows: 1fr 1fr 1fr
+      column-gap: 3.4%
+    +r(992)
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-template-rows: 1fr 1fr
+      column-gap: 20px
 
     li
       position: relative
@@ -37,5 +45,3 @@
         top: -24px
         left: 50%
         transform: translateX(-50%)
-        // left: 0
-        // right: 0

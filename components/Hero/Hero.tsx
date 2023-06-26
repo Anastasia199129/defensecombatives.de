@@ -94,7 +94,7 @@ export default function Hero({ data, type }: Props) {
         >
           <Container>
             <div className={s.heroContent}>
-              <h1>{data?.title}</h1>
+              <h1 className={`${type === 'frauen' && s.frauenTitle}`}>{data?.title}</h1>
               <h2>{data.subtitle}</h2>
 
               {type === 'kinder' && data.text && windowWidth > 767 && (
