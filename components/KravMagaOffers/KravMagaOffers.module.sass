@@ -2,6 +2,8 @@
 
 .outsideWrapper
   font-family: $r
+  +r(0, 575)
+    background-color: $blue
 
   .insideWrapper
     background-color: $blue
@@ -9,14 +11,28 @@
     display: flex
     align-items: center
     justify-content: flex-end
-    padding: 60px 60px 80px
     color: $white
+    +r(0, 575)
+      gap: 20px
+      flex-direction: column
+      padding-bottom: 40px
+    +r(576, 799)
+      padding: 42% 20px 60px 20px
+    +r(800)
+      padding: 60px 60px 80px
 
     .imgWrapper
-      position: absolute
-      top: -32px
-      left: -32px
-      width: 45%
+      +r(0, 575)
+        margin-top: -23px
+      +r(576)
+        position: absolute
+        top: -32px
+        left: -32px
+      +r(576, 799)
+        width: 66%
+      +r(800)
+        width: 45%
 
     p
-      width: 54%
+      +r(800)
+        width: 54%
