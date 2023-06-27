@@ -1,3 +1,5 @@
+@import ../../styles/settings
+  
 .section
   font-weight: 500
 
@@ -5,8 +7,14 @@
     display: flex
     align-items: center
     justify-content: center
-    gap: 40px
+    // gap: 40px
     padding-top: 50px
 
     li
       width: 170px
+      
+      &:not(:last-child)
+        +r(0, 575)
+          margin-right: 20px
+        +r(576)
+          margin-right: 40px

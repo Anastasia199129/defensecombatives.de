@@ -7,13 +7,19 @@
 
   .wrapper
     position: relative
-    padding: 46px 0px 68px 280px
+    +r(0, 575)
+      padding: 60px 0px 175px 0px
+    +r(576)
+      padding: 46px 0px 68px 280px
 
     .imgWrapper
-      width: 260px
       position: absolute
       bottom: 0
       left: 0
+      +r(0, 575)
+        width: 170px
+      +r(576)
+        width: 260px
 
     .title
       font-weight: 600  
