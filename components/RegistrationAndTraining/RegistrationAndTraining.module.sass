@@ -2,20 +2,37 @@
 
 .section
   font-family: $r
+  +r(0, 575)
+    padding-top: 64px
+  +r(576, 991)
+    padding-top: 96px
+  +r(992)
+    padding-top: 144px
 
   &.sectionWrapper
     background-color: $blue
-    background: linear-gradient(to right, $blue 50%, $blueLight 50%)
+    +r(0, 575)
+      background: linear-gradient(to bottom, $blue 57%, $blueLight 43%)
+    +r(576)  
+      background: linear-gradient(to right, $blue 50%, $blueLight 50%)
 
   h3
-    font-size: 22px
     color: $white
     text-transform: uppercase
-    margin-bottom: 30px
+    +r(0, 992)
+      font-size: 18px
+      margin-bottom: 20px
+    +r(992) 
+      font-size: 22px 
+      margin-bottom: 30px
 
   .wrapper
     display: grid
-    grid-template-columns: 1fr 1fr
+    +r(0, 575)
+      grid-template-columns: 1fr
+      padding-bottom: 60px
+    +r(576)  
+      grid-template-columns: 1fr 1fr
 
   .uber_uns  
     display: flex
@@ -32,9 +49,14 @@
         background-color: $blue  
 
   .card
-    padding: 100px 20px 100px 80px
     position: relative
     color: $white
+    +r(0, 575)
+      padding: 100px 20px 0px 0px
+    +r(576, 991)
+      padding: 100px 20px 80px 26px
+    +r(992)
+      padding: 100px 20px 100px 80px
 
     &:first-child
 
@@ -48,13 +70,26 @@
 
     &::before
       position: absolute
-      width: 70px
-      left: 20px
-      top: 30px
+      +r(0, 575)
+        left: 0
+        width: 50px
+        top: 30px
+      +r(576) 
+        left: 20px 
+      +r(576, 991)  
+        top: 30px
+        width: 60px
+      +r(992)
+        top: 20px
+        width: 70px
+
 
     li
       &:not(:last-child)
-        margin-bottom: 20px
+        +r(0, 991)
+          margin-bottom: 10px
+        +r(992)  
+          margin-bottom: 20px
 
     address
       font-style: normal

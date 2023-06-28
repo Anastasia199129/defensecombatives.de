@@ -1,7 +1,11 @@
 {
   "title": "Trainingsplan",
   "img": {
-    "src": "schedule.jpg",
+    "src": {
+      "desktop": "img/schedule.jpg",
+      "tablet": "img/Schedule_tablet.jpg",
+      "mobile": "img/schedule_mobile.jpg"
+    },
     "title": "schedule",
     "alt": "schedule"
   }

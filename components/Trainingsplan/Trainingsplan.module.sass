@@ -2,10 +2,10 @@
 
 .wrapper
   position: relative
-  background-image: url('./img/schedule_bg.png'), url('./img/BG_2blue.jpg')
-  background-size: 1500px, 1700px
+  background-image: url('./img/schedule_bg.png')
+  background-size: 1500px
   background-repeat: no-repeat
-  background-position: center -25px, center 1070px
+  background-position: center -25px
 
   .section
     padding: 150px 0px 150px 0px
@@ -13,9 +13,18 @@
 
     h1
       color: $white
+
   .imgSection
     position: relative
-    z-index: 1    
+    z-index: 1 
+
+    div
+      +r(0, 575)
+        margin-bottom: -64px
+      +r(576, 991)
+        margin-bottom: -96px
+      +r(992)
+        margin-bottom: -144px
 
   .absolute
     position: absolute

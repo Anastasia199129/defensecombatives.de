@@ -2,14 +2,22 @@
 
 .cardWrapper
   font-family: $r
-  display: grid
-  grid-template-columns: 1fr 1fr 1fr
-  column-gap: 30px
+  // display: grid
+  // grid-template-columns: 1fr 1fr 1fr
+  // column-gap: 30px
+  display: flex
+  flex-wrap: wrap
 
   .card
     position: relative
     padding: 80px 30px 40px 30px
     background-color: $greyLight
+    margin: 15px
+    object-fit: cover
+    +r(576, 991)
+      flex-basis: calc(50% - 30px)
+    +r(992)
+      flex-basis: calc(33.33% - 30px)
 
     &:nth-child(even)
 
