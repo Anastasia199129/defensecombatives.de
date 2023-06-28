@@ -96,7 +96,7 @@ export default function über_uns() {
       <CustomHead />
       <Header />
       <main>
-        <Hero data={heroData} />
+        <Hero data={heroData} type='uber_uns' />
         <WirSind />
         <MedalsAndText />
         <TrainingSessions data={trainingSessionsData} />

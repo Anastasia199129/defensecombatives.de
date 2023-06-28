@@ -16,7 +16,7 @@ export default function WirSind() {
         />
         <div className={s.wrapper}>
 
-          <div>
+          <div className={s.imgWrapper}>
             <img src={data.img.src} alt={data.img.alt} title={data.title}/>
           </div>
           <div

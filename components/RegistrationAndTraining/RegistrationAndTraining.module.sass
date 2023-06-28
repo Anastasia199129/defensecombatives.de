@@ -34,10 +34,34 @@
     +r(576)  
       grid-template-columns: 1fr 1fr
 
-  .uber_uns  
-    display: flex
-    flex-direction: row-reverse
-    justify-content: space-between
+    .card
+
+      &::before
+        position: absolute
+        +r(0, 575)
+          left: 0
+
+  .uber_uns
+    +r(576)
+      display: flex
+      flex-direction: row-reverse
+      justify-content: space-between
+
+    .card
+      +r(0, 575)
+        padding-left: 20px
+
+      &:last-child
+        +r(0, 575)  
+          padding-bottom: 60px
+
+      &:first-child
+        +r(0, 575)  
+          padding-bottom: 20px
+
+      &::before
+        +r(0, 575)
+          left: 20px
 
     .card
       width: 100%
@@ -71,7 +95,7 @@
     &::before
       position: absolute
       +r(0, 575)
-        left: 0
+        // left: 0
         width: 50px
         top: 30px
       +r(576) 

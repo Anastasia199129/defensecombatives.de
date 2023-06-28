@@ -22,8 +22,12 @@
     &:nth-child(even)
 
       img
-        width: 80px
-        top: -45px
+        +r(0, 575)
+          width: 60px 
+          top: -25px
+        +r(576)
+          width: 80px
+          top: -45px
 
     
     &:nth-child(odd) 

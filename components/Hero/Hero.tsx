@@ -58,15 +58,6 @@ export default function Hero({ data, type }: Props) {
                   width={1000}
                   height={400}
                 />
-                {/* 
-                <img
-                  src={
-                    windowWidth > 575
-                      ? item.imageUrl.url
-                      : item.imageUrl.mobileUrl
-                  }
-                  alt={`Slide ${item.id}`}
-                /> */}
               </Link>
             ))}
           </Slider>
@@ -80,7 +71,8 @@ export default function Hero({ data, type }: Props) {
               ? s.frauen
               : type === 'behorden'
               ? s.behorden
-              : ''
+              : type === 'uber_uns'
+              ? s.uber_uns : ''
           }`}
           style={{
             backgroundImage: `url(${
