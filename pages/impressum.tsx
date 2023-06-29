@@ -12,7 +12,7 @@ export default function impressum() {
       <CustomHead />
       <Header />
       <main>
-      <Hero data={heroData} />
+      <Hero data={heroData} type='uber_uns'/>
       <Impressum/>
       </main>
       <Footer />
