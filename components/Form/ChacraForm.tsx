@@ -91,17 +91,18 @@ export default function ChacraForm({ backgroundImage = false }: Props) {
       ...prev,
       isLoading: true,
     }))
-    if (values.name && values.email && values.nachname) {
-      const result = await sendContactForm(values)
-      try {
+    try {
+      if (values.name && values.email && values.nachname) {
+        const result = await sendContactForm(values)
+
         // if (result.ok) {
-        const res = await axios.post('/api/users/addUser', {
-          ...values,
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json',
-          },
-        })
+        // const res = await axios.post('/api/users/addUser', {
+        //   ...values,
+        //   headers: {
+        //     'Access-Control-Allow-Origin': '*',
+        //     'Content-Type': 'application/json',
+        //   },
+        // })
         toast.success('Daten gesendet!')
         setState(initialState)
         setTouched({
@@ -109,15 +110,21 @@ export default function ChacraForm({ backgroundImage = false }: Props) {
           nachname: false,
           email: false,
         })
-        console.log({ res })
+        // console.log({ res })
         // }
-      } catch (error) {
-        console.log(error)
+        setState(initialState)
+      } else {
+        toast.error('Pflichtfelder ausfüllen!')
+        // 
       }
-    } else {
-      toast.error('Pflichtfelder ausfüllen!')
-      setState(initialState)
+    } catch (error) {
+      console.log(error)
+      
     }
+    setState((prev) => ({
+      ...prev,
+      isLoading: false,
+    }))
   }
 
   // const getAllUsers = async () => {
@@ -137,9 +144,10 @@ export default function ChacraForm({ backgroundImage = false }: Props) {
           Hinterlassen Sie eine Anfrage und wir sagen Ihnen, was Sie brauchen,
           um mit den Kursen zu beginnen!
         </h4>
-        <form 
-        // onSubmit={onSubmit}
-         className={s.formContainer}>
+        <form
+          // onSubmit={onSubmit}
+          className={s.formContainer}
+        >
           <Container className={s.form} maxW='100%'>
             <FormControl
               isRequired
