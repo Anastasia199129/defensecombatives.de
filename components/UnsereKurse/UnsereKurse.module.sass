@@ -16,7 +16,7 @@
     row-gap: 3%
   +r(992)
     column-gap: 20px
-    row-gap: 20px 
+    row-gap: 20px
 
   li
     display: flex
@@ -27,13 +27,13 @@
     gap: 26px
     +r(0, 575)
       padding: 20px
-    +r(0, 767) 
+    +r(0, 767)
       font-size: 14px
     +r(768, 991)
-      font-size: 16px 
-    +r(575, 991)  
+      font-size: 16px
+    +r(575, 991)
       padding: 15px
-    +r(992)  
+    +r(992)
       padding: 20px
 
     &:nth-child(odd)
@@ -44,9 +44,47 @@
       color: $white
       background-color: $blue
 
-    img
-      +r(575, 991)  
-        height: 120px
-        min-width: 140px
-      +r(992)  
-        height: 120px
+    &:not(.itemWithLink)
+      
+      img
+        +r(0, 575)
+          height: 120px
+          max-width: 200px
+        +r(575, 991)
+          height: 120px
+          max-width: 180px
+        +r(992)
+          max-width: 250px
+          height: 120px
+
+    &.itemWithLink
+
+      img
+        +r(0, 575)
+          height: 120px
+          max-width: 180px
+        +r(575, 991)
+          height: 120px
+          max-width: 160px
+        +r(992)
+          max-width: 220px
+          height: 120px
+
+
+    .link
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      transform: scale(1)
+      transition: $tr
+
+      &:hover, &:focus
+        padding-left: 10px
+        transform: scale(1.1)
+
+      svg
+        margin-left: 10px
+        +r(0, 991)
+          width: 13px
+        +r(992)
+          width: 15px
