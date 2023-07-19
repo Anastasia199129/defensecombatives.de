@@ -1,5 +1,26 @@
 @import ../../styles/settings
 
+.uber_unts
+  +r(0, 575)
+    margin-top: 64px
+    margin-bottom: 64px
+  +r(576, 991)
+    margin-top: 96px
+    margin-bottom: 96px
+  +r(992)
+    margin-top: 144px
+    margin-bottom: 144px
+
+.mainPage
+  +r(0, 575)
+    padding-bottom: 64px
+  +r(576)  
+    background-color: $greyLight
+  +r(576, 991)
+    padding-bottom: 96px
+  +r(992)
+    padding-bottom: 144px
+
 .wrapper
   +r(992)
     display: flex
@@ -7,7 +28,7 @@
     justify-content: space-between
 
   h3
-    +r(0, 991)  
+    +r(0, 991)
       margin-bottom: 20px
 
   .link

@@ -4,9 +4,13 @@ import data from './invite.json'
 
 import s from './Invite.module.sass'
 
-export default function Invite() {
+interface Props {
+  type?: string
+}
+
+export default function Invite({type}: Props) {
   return (
-    <section>
+    <div className={type === 'mainPage' ? s.mainPage : s.uber_unts}>
       <Container>
         <div className={s.wrapper}>
           <h3>{data.title}</h3>
@@ -15,6 +19,6 @@ export default function Invite() {
           </Link>
         </div>
       </Container>
-    </section>
+    </div>
   )
 }

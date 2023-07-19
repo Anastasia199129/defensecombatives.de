@@ -56,6 +56,7 @@ export default function Home() {
         <Kmg/>
         {/* <New /> */}
         {/* <Invite/> */}
+        <Invite type='mainPage'/>
         <ChacraForm backgroundImage={true}/>
         {/* <Form /> */}
         {/* <DemoCarousel/> */}
