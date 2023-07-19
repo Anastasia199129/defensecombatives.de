@@ -115,11 +115,10 @@ export default function ChacraForm({ backgroundImage = false }: Props) {
         setState(initialState)
       } else {
         toast.error('Pflichtfelder ausfüllen!')
-        // 
+        //
       }
     } catch (error) {
       console.log(error)
-      
     }
     setState((prev) => ({
       ...prev,
@@ -142,7 +141,7 @@ export default function ChacraForm({ backgroundImage = false }: Props) {
       <MyContainer>
         <h4>
           Hinterlassen Sie eine Anfrage und wir sagen Ihnen, was Sie brauchen,
-          um mit den Kursen zu beginnen!
+          um bei uns durch zu starten!
         </h4>
         <form
           // onSubmit={onSubmit}
