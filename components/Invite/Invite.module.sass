@@ -37,6 +37,11 @@
     color: $white
     padding: 10px 40px
     text-transform: uppercase
+    transform: scale(1)
+      
+    &:hover, &:focus
+      transition: scale 1000s cubic-bezier(0.4, 0, 0.2, 1) 
+      transform: scale(1.1)
 
     &::after
       position: absolute
