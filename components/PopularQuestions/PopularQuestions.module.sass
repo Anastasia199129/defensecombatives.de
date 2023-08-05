@@ -1,5 +1,5 @@
 @import ../../styles/settings
-  
+
 .section
   font-family: $r
 
@@ -7,15 +7,26 @@
 
     li
 
+      a
+        text-decoration: underline
+
+      .yellow
+        a
+          color: $orange
+
+      .red
+        a
+          color: $redLight
+
       &:not(:last-child)
         margin-bottom: 30px
-        
+
       h4
         font-size: 20px
         font-weight: 500
         margin-bottom: 10px
 
-        &.title 
+        &.title
           color: $orange
 
         &.frauen

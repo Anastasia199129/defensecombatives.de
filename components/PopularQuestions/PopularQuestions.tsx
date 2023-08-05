@@ -24,7 +24,13 @@ export default function PopularQuestions({ data, type }: Props) {
           {data.list.map(({ id, text, title }) => (
             <li key={id}>
               <h4 className={`${type === 'frauen'? s.frauen : s.title}`}>{title}</h4>
-              <p>{text}</p>
+              <div
+                className={`${type !== 'frauen'? s.yellow : s.red}`}
+                dangerouslySetInnerHTML={{
+                  __html: text,
+                }}
+              />
+              {/* <p>{text}</p> */}
             </li>
           ))}
         </ul>

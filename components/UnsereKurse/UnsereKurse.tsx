@@ -7,6 +7,8 @@ import Arrow from '../SpezAngebote/Arrow'
 
 import data from './data.json'
 
+// import pdfFile from '@/public/DefenseCombativesGbRNutzungsvertrag.pdf'
+
 import s from './UnsereKurse.module.sass'
 
 export default function UnsereKurse() {
@@ -32,12 +34,18 @@ export default function UnsereKurse() {
                   }}
                 />
               )}
-              {link.text && link.link && (
-                <Link className={s.link} href={link.link}>
-                  {link.text}
-                  <Arrow />
-                </Link>
-              )}
+              {link.text &&
+                link.text === 'VERTRAG HERUNTERLADEN' &&
+                link.link && (
+                  <a
+                    className={s.link}
+                    href='/DefenseCombativesGbRNutzungsvertrag.pdf'
+                    download
+                  >
+                    {link.text}
+                    <Arrow />
+                  </a>
+                )}
             </li>
           ))}
         </ul>
