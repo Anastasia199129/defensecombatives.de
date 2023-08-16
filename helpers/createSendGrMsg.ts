@@ -10,7 +10,7 @@ export const createSendGrMsg = ({ name, nachname, number, email, nachricht }: Pr
   console.log('here', name, nachname, nachricht, email, number)
 
   return {
-    to: 'nastasia199126@gmail.com',
+    to: 'kontakt@defensecombatives.de',
     from: 'defensecombatives.de@gmail.com',
     subject: 'Sending with Twilio SendGrid is Fun',
     text: `Name: ${name}, Email: ${email}, Number: ${number}, Message: ${nachricht}`,
