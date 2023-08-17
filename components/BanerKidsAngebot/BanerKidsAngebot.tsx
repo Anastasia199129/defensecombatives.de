@@ -30,7 +30,7 @@ export default function BanerKidsAngebot({data}: Props) {
       {/* <Container> */}
        <div className={s.title}>
        <h3>
-          <span>Unser sonderangebot</span> für Kindergärten und schulen
+          <span>Unser sonderangebot</span> für KINDERTAGESSTÄTTEN und schulen
         </h3>
        </div>
       {/* </Container> */}
