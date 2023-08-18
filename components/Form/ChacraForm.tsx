@@ -13,6 +13,8 @@ import { toast } from 'react-toastify'
 import axios from 'axios'
 import { useState } from 'react'
 
+import { checkEmail } from '@/helpers/checkEmail'
+
 import s from './Form.module.sass'
 
 interface Props {
@@ -35,6 +37,11 @@ export default function ChacraForm({ backgroundImage = false }: Props) {
     name: false,
     nachname: false,
     email: false,
+  })
+  const [isValidValues, setIsValidValues] = useState({
+    name: true,
+    nachname: true,
+    email: true,
   })
   const { values, isLoading } = state
 
@@ -72,6 +79,45 @@ export default function ChacraForm({ backgroundImage = false }: Props) {
         [target.name]: target.value,
       },
     }))
+
+    ////check is Email valid 
+    if (!checkEmail(values.email) && values.email.length > 3) {
+      setIsValidValues((prev) => ({
+        ...prev,
+        email: false,
+      }))
+    } else {
+      setIsValidValues((prev) => ({
+        ...prev,
+        email: true,
+      }))
+    }
+
+    ////check is Name valid
+    if (!values.name) {
+      setIsValidValues((prev) => ({
+        ...prev,
+        name: false,
+      }))
+    } else {
+      setIsValidValues((prev) => ({
+        ...prev,
+        name: true,
+      }))
+    }
+
+    ////check is Nachname valid
+    if (!values.nachname) {
+      setIsValidValues((prev) => ({
+        ...prev,
+        nachname: false,
+      }))
+    } else {
+      setIsValidValues((prev) => ({
+        ...prev,
+        nachname: true,
+      }))
+    }
   }
 
   const handleChangeTextarea = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -92,7 +138,12 @@ export default function ChacraForm({ backgroundImage = false }: Props) {
       isLoading: true,
     }))
     try {
-      if (values.name && values.email && values.nachname) {
+      if (
+        values.name &&
+        values.email &&
+        values.nachname &&
+        checkEmail(values.email)
+      ) {
         const result = await sendContactForm(values)
 
         // if (result.ok) {
@@ -110,12 +161,41 @@ export default function ChacraForm({ backgroundImage = false }: Props) {
           nachname: false,
           email: false,
         })
+        setIsValidValues((prev) => ({
+          ...prev,
+          email: true,
+          name: true,
+          nachname: true
+        }))
         // console.log({ res })
         // }
         setState(initialState)
       } else {
         toast.error('Pflichtfelder ausfüllen!')
-        //
+
+        ///invalid email
+        if (!checkEmail(values.email)) {
+          setIsValidValues((prev) => ({
+            ...prev,
+            email: false,
+          }))
+        }
+
+        ///invalid name
+        if (!values.name) {
+          setIsValidValues((prev) => ({
+            ...prev,
+            name: false,
+          }))
+        }
+
+        ///invalid nachname
+        if (!values.nachname) {
+          setIsValidValues((prev) => ({
+            ...prev,
+            nachname: false,
+          }))
+        }
       }
     } catch (error) {
       console.log(error)
@@ -150,7 +230,7 @@ export default function ChacraForm({ backgroundImage = false }: Props) {
           <Container className={s.form} maxW='100%'>
             <FormControl
               isRequired
-              isInvalid={!values.name && touched.name}
+              isInvalid={!values.name && touched.name || !isValidValues.name}
               mb={5}
             >
               <FormLabel>Name</FormLabel>
@@ -165,7 +245,7 @@ export default function ChacraForm({ backgroundImage = false }: Props) {
             </FormControl>
             <FormControl
               isRequired
-              isInvalid={!values.nachname && touched.nachname}
+              isInvalid={!values.nachname && touched.nachname || !isValidValues.nachname}
               mb={5}
             >
               <FormLabel>Nachname</FormLabel>
@@ -180,18 +260,26 @@ export default function ChacraForm({ backgroundImage = false }: Props) {
             </FormControl>
             <FormControl
               isRequired
-              isInvalid={!values.email && touched.email}
+              isInvalid={
+                (!values.email && touched.email) || !isValidValues.email
+              }
               mb={5}
             >
               <FormLabel>E-Mail</FormLabel>
               <Input
+                style={{ borderColor: `${isValidValues.email ? '' : 'red'}` }}
                 type='email'
                 name='email'
                 value={values.email}
                 onChange={handleChange}
                 onBlur={onBlur}
               />
-              <FormErrorMessage>Obligatorisch</FormErrorMessage>
+              {!isValidValues.email && (
+                <FormErrorMessage>ungültige E-Mail</FormErrorMessage>
+              )}
+              {!values.email && touched.email && (
+                <FormErrorMessage>Obligatorisch</FormErrorMessage>
+              )}
             </FormControl>
 
             <FormControl mb={5}>
@@ -213,7 +301,6 @@ export default function ChacraForm({ backgroundImage = false }: Props) {
               />
             </FormControl>
           </Container>
-          {/* <button>kjojl</button> */}
           <Button
             className={s.button}
             isLoading={isLoading}
