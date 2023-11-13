@@ -38,26 +38,67 @@ import Invite from '@/components/Invite/Invite'
 //  console.log(x(90, '1 hour'));
 //  console.log(x(1.35, '1.5 hour'));
 //  console.log(x(1.6, '2 hour'));
- 
+
+function includess(array: string | any[], value: string | number) {
+  // Change code below this line
+  let includes = false
+
+  console.log();
+  
+  for (let i = 0; i < array.length; i += 1) {
+
+    console.log('llll', array[i], value, array.length)
+    // console.log('qqq', i)
+    
+    if (array[i] !== value) {
+      includes = false
+      console.log('f',{includes});
+
+    } else {
+      includes = true
+      console.log('t',{includes});
+      return includes
+
+    }
+  }
+  return includes
+  // Change code above this line
+}
+
+console.log('m',includess([1, 2, 3, 4, 5], 3))
+console.log(includess([1, 2, 3, 4, 5], 17))
+console.log(
+  'mm', includess(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Jupiter')
+)
+console.log(includess(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Uranus'))
+console.log(includess(['apple', 'plum', 'pear', 'orange'], 'plum'))
+
+// Вызов includes([1, 2, 3, 4, 5], 3) возвращает true
+// Вызов includes([1, 2, 3, 4, 5], 17) возвращает false
+// Вызов includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter") возвращает true
+// Вызов includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus") возвращает false
+// Вызов includes(["apple", "plum", "pear", "orange"], "plum") возвращает true
+// Вызов includes(["apple", "plum", "pear", "orange"], "kiwi") возвращает false
+
 export default function Home() {
   return (
     <>
-      <CustomHead/>
+      <CustomHead />
       <Header />
       <main>
-        <Hero data={{title: '', subtitle: '', text: ''}}/>
-        <Willkommen/>
-        <TrainingBaner/>
+        <Hero data={{ title: '', subtitle: '', text: '' }} />
+        <Willkommen />
+        <TrainingBaner />
         {/* <Container>
           <Carusel/>
         </Container> */}
         <UnsereKurse />
-        <SpezAngebote/>
-        <Kmg/>
+        <SpezAngebote />
+        <Kmg />
         {/* <New /> */}
         {/* <Invite/> */}
-        <Invite type='mainPage'/>
-        <ChacraForm backgroundImage={true}/>
+        <Invite type='mainPage' />
+        <ChacraForm backgroundImage={true} />
         {/* <Form /> */}
         {/* <DemoCarousel/> */}
       </main>
