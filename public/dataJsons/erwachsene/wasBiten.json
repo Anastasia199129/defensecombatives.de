@@ -1,16 +1,16 @@
 {
-  "cards": [
-    {
-      "id": "1",
-      "title": "Krav maga für erwachsene",
-      "content": "Krav Maga (hebräisch: Kontaktkampf) ist ein leicht erlernbares, zweckorientiertes Selbstverteidigungssystem. Als Simulation der Stressbelastung während eines Übergriffes wird Krav Maga unter starker körperlicher Anstrengung trainiert. Die Techniken & die Trainings-Methodik sind stets realitätsbezogen erprobt und basieren auf dem aktuellen Stand der KMG mit Hauptsitz in Israel.",
-       
-      "price": "<p>Die monatliche Gebühr beträgt <span><br/>65,00 Euro für 3x die Woche a 90 Minuten Training</span></p>",
-      "img": {
-        "src": "/img/ervachsene-curs.png",
-        "title": "frauen_curs",
-        "alt": "frauen_curs"
-      }
-    }
-  ]
+ "cards": [
+  {
+   "id": "1",
+   "title": "Krav maga für erwachsene",
+   "content": "Krav Maga (hebräisch: Kontaktkampf) ist ein leicht erlernbares, zweckorientiertes Selbstverteidigungssystem. Als Simulation der Stressbelastung während eines Übergriffes wird Krav Maga unter starker körperlicher Anstrengung trainiert. Die Techniken & die Trainings-Methodik sind stets realitätsbezogen erprobt und basieren auf dem aktuellen Stand der KMG mit Hauptsitz in Israel.",
+
+   "price": "<p>Krav Maga <span>60,00 Euro zwei mal die Woche Training</span><br/>Warrior Fit <span>60,00 Euro zwei mal die Woche Training</span><br/>Kombi Tarif (Unbegrenzt Krav Maga und Warrior Fit) <span>85,00 Euro </span></p>",
+   "img": {
+    "src": "/img/ervachsene-curs.png",
+    "title": "frauen_curs",
+    "alt": "frauen_curs"
+   }
+  }
+ ]
 }

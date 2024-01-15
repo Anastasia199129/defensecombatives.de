@@ -1,16 +1,16 @@
 {
-  "cards": [
-    {
-      "id": "1",
-      "title": "Krav maga für frauen",
-      "content": "Wir bieten den Frauen in einer unterstützenden Gemeinschaft, die sich gegenseitig motiviert, einen Safe Space an. Krav Maga ist ein Selbstverteidigungssystem, welches hoch effektiv und leicht erlernbar ist – unabhängig vom Alter, Fitnesslevel (Sportgesundheit vorausgesetzt) oder Vorkenntnissen. Frauen werden von Angreifern oft unterschätzt und genau das machen wir uns im Krav Maga zu nutze. Kommen wir erst einmal durch „Dirty Tricks“ aus der misslichen Lage heraus, setzen wir zum Gegenangriff an und nutzen den Überraschungsmoment aus. Jede Verteidigung ist gleichzeitig ein Angriff. Als Simulation der Stressbelastung während eines Übergriffes wird Krav Maga unter starker körperlicher Anstrengung trainiert. Die Stärke des Körpers wird den Frauen hierdurch wieder in das Bewusstsein gerufen, wodurch das Selbstbewusstsein gefördert wird.",
-       
-      "price": "<p>Die monatliche Gebühr beträgt <span>50,00 Euro für 1x die Woche a 90 Minuten Training</span></p>",
-      "img": {
-        "src": "/img/frauen_curs.png",
-        "title": "frauen_curs",
-        "alt": "frauen_curs"
-      }
-    }
-  ]
+ "cards": [
+  {
+   "id": "1",
+   "title": "Krav maga für frauen",
+   "content": "Wir bieten den Frauen in einer unterstützenden Gemeinschaft, die sich gegenseitig motiviert, einen Safe Space an. Krav Maga ist ein Selbstverteidigungssystem, welches hoch effektiv und leicht erlernbar ist – unabhängig vom Alter, Fitnesslevel (Sportgesundheit vorausgesetzt) oder Vorkenntnissen. Frauen werden von Angreifern oft unterschätzt und genau das machen wir uns im Krav Maga zu nutze. Kommen wir erst einmal durch „Dirty Tricks“ aus der misslichen Lage heraus, setzen wir zum Gegenangriff an und nutzen den Überraschungsmoment aus. Jede Verteidigung ist gleichzeitig ein Angriff. Als Simulation der Stressbelastung während eines Übergriffes wird Krav Maga unter starker körperlicher Anstrengung trainiert. Die Stärke des Körpers wird den Frauen hierdurch wieder in das Bewusstsein gerufen, wodurch das Selbstbewusstsein gefördert wird.",
+
+   "price": "<p>Die monatliche Gebühr beträgt <span>60,00 Euro für 1x die Woche a 90 Minuten Training</span></p>",
+   "img": {
+    "src": "/img/frauen_curs.png",
+    "title": "frauen_curs",
+    "alt": "frauen_curs"
+   }
+  }
+ ]
 }
